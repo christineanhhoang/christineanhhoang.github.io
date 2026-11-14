@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="assets/8d6786fb-a77e-4116-9e66-0dbe03438cd6.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<style>/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v23/-F63fjptAgt5VM-kVkqdyU8n1iIq131nj-otFQ.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v23/-F63fjptAgt5VM-kVkqdyU8n1isq131nj-otFQ.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v23/-F63fjptAgt5VM-kVkqdyU8n1pUL8lJPheIVLNg.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v23/-F63fjptAgt5VM-kVkqdyU8n1iAq131nj-otFQ.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v23/-F63fjptAgt5VM-kVkqdyU8n1iEq131nj-otFQ.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v23/-F63fjptAgt5VM-kVkqdyU8n1i8q131nj-o.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v23/-F6qfjptAgt5VM-kVkqdyU8n3twJwl1FgsAXHNlYzg.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v23/-F6qfjptAgt5VM-kVkqdyU8n3twJwlRFgsAXHNlYzg.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v23/-F6qfjptAgt5VM-kVkqdyU8n3twJwupkp-8_FtFg95o.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v23/-F6qfjptAgt5VM-kVkqdyU8n3twJwl9FgsAXHNlYzg.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v23/-F6qfjptAgt5VM-kVkqdyU8n3twJwl5FgsAXHNlYzg.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v23/-F6qfjptAgt5VM-kVkqdyU8n3twJwlBFgsAXHNk.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poetsen One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poetsenone/v3/ke8hOgIaMUB37xCgvCntWuImofOzEqG8vb8.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poetsen One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poetsenone/v3/ke8hOgIaMUB37xCgvCntWuIoofOzEqG8.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* devanagari */
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/d7f520ad-3231-4443-b115-4556a5a6d3e6.woff2") format('woff2');
+  unicode-range: U+0900-097F, U+1CD0-1CF4, U+1CF7-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B0A;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/20a46350-9063-4a5c-a741-0784888e66d1.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/9c3adf30-c9bc-4c3e-a161-a72ccac3bb14.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* devanagari */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("assets/dc9493e8-e3fd-4290-a7ee-3edce2fb898a.woff2") format('woff2');
+  unicode-range: U+0900-097F, U+1CD0-1CF4, U+1CF7-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B0A;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("assets/f6d4b099-1964-4728-9137-066c700a92c0.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("assets/27a3b561-0d86-4ac7-861c-7c9e79dd798f.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* devanagari */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/90cf3cc4-0c77-4550-ae40-475baae56057.woff2") format('woff2');
+  unicode-range: U+0900-097F, U+1CD0-1CF4, U+1CF7-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B0A;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/a2d08821-ccec-4486-8fcd-d6bddd5038bc.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/2b3a9764-2ae0-4bfb-be20-a6c4d0213c01.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* devanagari */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/a90f80a6-25ee-4085-b799-4b2d4cd20ab5.woff2") format('woff2');
+  unicode-range: U+0900-097F, U+1CD0-1CF4, U+1CF7-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B0A;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/de31e586-06ef-470a-87d2-2ffb67b7dc75.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/384435fa-291e-4fa2-8d62-288ae968ee80.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* devanagari */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/9910122e-9705-4b45-8d3a-c94cd83e73b0.woff2") format('woff2');
+  unicode-range: U+0900-097F, U+1CD0-1CF4, U+1CF7-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B0A;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/4488a1ed-6e94-401a-9078-4f4d2fd1d288.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/f88d55a3-86df-46e8-951d-0863493f026f.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* devanagari */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/93a2ad18-ddda-42f1-8b18-24bad0bc57ab.woff2") format('woff2');
+  unicode-range: U+0900-097F, U+1CD0-1CF4, U+1CF7-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B0A;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/ea4ab639-2af0-49ef-83f1-ee8a98a6f25a.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/991b86be-83d7-481b-8ee6-fc9732976bdc.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<script src="assets/d2b4af54-ce65-4153-9fae-9b6fcefdd7fa.js"></script>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #fffdfb; -webkit-font-smoothing: antialiased; }
+  a { color: #A9481A; text-decoration: none; }
+  a:hover { color: #23813B; }
+  ::selection { background: #F9D3EF; }
+  /* Brand colours: primary #D96827, primary text #A9481A, secondary #23813B, accent #E443B7, neutral #DFD0BD */
+  [style*="color: #c2551d"], [style*="color: rgb(194, 85, 29)"] { color: #A9481A !important; }
+  h1[style*="color: #c2551d"], h1[style*="color: rgb(194, 85, 29)"], h2[style*="color: #c2551d"], h2[style*="color: rgb(194, 85, 29)"] { color: #D96827 !important; }
+  footer[style*="background: #c2551d"], footer[style*="background: rgb(194, 85, 29)"] { background: #A9481A !important; }
+  span[style*="background: #c2551d"], span[style*="background: rgb(194, 85, 29)"] { background: #23813B !important; }
+  [style*="background: #fdf3ef"], [style*="background: rgb(253, 243, 239)"] { background: #F8EAF6 !important; }
+  [style*="background: #fdf9f6"], [style*="background: rgb(253, 249, 246)"] { background: #FAF6F1 !important; }
+  [style*="background: #f3efec"], [style*="background: rgb(243, 239, 236)"], [style*="background: #e8eee6"], [style*="background: rgb(232, 238, 230)"] { background: #F2E4D3 !important; }
+  [style*="#efe6e0"], [style*="rgb(239, 230, 224)"], [style*="#e9ded7"], [style*="rgb(233, 222, 215)"], [style*="#f0e8e3"], [style*="rgb(240, 232, 227)"] { border-color: #E8DDD0 !important; }
+  [style*="#f0ddd3"], [style*="rgb(240, 221, 211)"], [style*="#e3d7cf"], [style*="rgb(227, 215, 207)"] { border-color: #F2E4D3 !important; }
+  blockquote { border-left-color: #E443B7 !important; }
+  #approach h2 { color: #D96827 !important; }
+  #approach h3 { color: #23813B !important; }
+  [style*="color: #4a5a60"], [style*="color: rgb(74, 90, 96)"] { color: #2E3B40 !important; }
+  [style*="color: #5b6a70"], [style*="color: rgb(91, 106, 112)"] { color: #34434A !important; }
+  [style*="color: #5f6f74"], [style*="color: rgb(95, 111, 116)"], [style*="color: #6a787d"], [style*="color: rgb(106, 120, 125)"] { color: #3A494F !important; }
+  #work a[href$=".dc.html"] { transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease; will-change: transform; }
+  #work a[href$=".dc.html"]:hover, #work a[href$=".dc.html"]:focus-visible { transform: translateY(-6px); border-color: #E443B7 !important; box-shadow: 0 16px 32px -20px rgba(23, 38, 43, 0.35); }
+  @media (prefers-reduced-motion: reduce) { #work a[href$=".dc.html"] { transition: border-color 0.25s ease; } #work a[href$=".dc.html"]:hover, #work a[href$=".dc.html"]:focus-visible { transform: none; } }
+  a[style*="border-radius: 999px"][style*="#d8cac1"], a[style*="border-radius: 999px"][style*="rgb(216, 202, 193)"], a[href="#contact"][style*="border-radius: 999px"], a[href="#work"][style*="border-radius: 999px"] { background: #E443B7 !important; color: #000000 !important; border-color: #E443B7 !important; }
+  a[style*="border-radius: 999px"][style*="#d8cac1"]:hover, a[style*="border-radius: 999px"][style*="rgb(216, 202, 193)"]:hover, a[href="#contact"][style*="border-radius: 999px"]:hover, a[href="#work"][style*="border-radius: 999px"]:hover { background: #EE7DCF !important; border-color: #EE7DCF !important; color: #000000 !important; }
+  html { scroll-behavior: smooth; }
+  .nav-dd .nav-dd-menu { display: none; }
+  .nav-dd:hover .nav-dd-menu, .nav-dd:focus-within .nav-dd-menu { display: block; }
+  @keyframes nudge { 0%,100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+</style>
+</helmet>
+<div style="font-family: Poppins, system-ui, sans-serif; color: #17262b; background: #fffdfb; overflow-x: hidden;">
+
+  <header style="position: sticky; top: 0; z-index: 50; background: rgba(255,253,251,0.88); backdrop-filter: blur(12px); border-bottom: 1px solid #efe6e0;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 16px 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;">
+      <a href="#top" style="font-size: 15px; font-weight: 600; letter-spacing: -0.01em; color: #17262b;">Christine Anh Hoang</a>
+      <nav style="display: flex; align-items: center; gap: clamp(16px, 3vw, 40px); font-size: 15px; font-weight: 500;">
+        <a href="#top" style="color: #17262b;">Home</a>
+        <a href="about.html" style="color: #17262b;">About</a>
+        <div class="nav-dd" style="position: relative; display: inline-flex;">
+        <a href="#work" style="display: inline-flex; align-items: center; gap: 6px; color: #17262b;">Work<span style="font-size: 9px; line-height: 1;">▾</span></a>
+        <div class="nav-dd-menu" style="position: absolute; top: 100%; left: 50%; transform: translateX(-50%); padding-top: 14px; min-width: 288px; z-index: 60;">
+          <div style="background: #fffdfb; border: 1px solid #e9ded7; box-shadow: 0 14px 36px rgba(23,38,43,0.12); padding: 6px; display: flex; flex-direction: column;">
+        <a href="service-orders.html" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 14px; color: #17262b; font-size: 14px; font-weight: 500; line-height: 1.35;" style-hover="background: #fdf3ef; color: #c2551d;">
+          <span>Service orders</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Energy intelligence platform × AGL</span>
+        </a>
+        <a href="legacy-contracts.html" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 14px; color: #17262b; font-size: 14px; font-weight: 500; line-height: 1.35;" style-hover="background: #fdf3ef; color: #c2551d;">
+          <span>Deprecating a legacy contracts page</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Energy intelligence platform × OVO</span>
+        </a>
+        <a href="platform-adoption.html" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 14px; color: #17262b; font-size: 14px; font-weight: 500; line-height: 1.35;" style-hover="background: #fdf3ef; color: #c2551d;">
+          <span>Pushing adoption of the full feature suite</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Energy intelligence platform</span>
+        </a>
+        <a href="compliance-scripts.html" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 14px; color: #17262b; font-size: 14px; font-weight: 500; line-height: 1.35;" style-hover="background: #fdf3ef; color: #c2551d;">
+          <span>Readable compliance scripts for agents</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Energy intelligence platform</span>
+        </a>
+        <a href="funding-structure.html" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 14px; color: #17262b; font-size: 14px; font-weight: 500; line-height: 1.35;" style-hover="background: #fdf3ef; color: #c2551d;">
+          <span>A streamlined funding structure</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Soldo</span>
+        </a>
+        <a href="strong-customer-authentication.html" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 14px; color: #17262b; font-size: 14px; font-weight: 500; line-height: 1.35;" style-hover="background: #fdf3ef; color: #c2551d;">
+          <span>Strong Customer Authentication</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Soldo</span>
+        </a>
+            <a href="#work" style="padding: 10px 14px; margin-top: 4px; border-top: 1px solid #f0e8e3; color: #c2551d; font-size: 13px; font-weight: 500;" style-hover="background: #fdf3ef; color: #c2551d;">All work →</a>
+          </div>
+        </div>
+      </div>
+        <a href="#approach" style="color: #17262b;">Approach</a>
+        <a href="#contact" style="display: inline-flex; align-items: center; padding: 9px 18px; border-radius: 999px; background: #17262b; color: #fffdfb; font-weight: 500;" style-hover="background: #c2551d; color: #fffdfb;">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="top" style="max-width: 1240px; margin: 0 auto; padding: clamp(48px, 9vw, 112px) 28px clamp(40px, 6vw, 80px); display: flex; flex-wrap: wrap; gap: clamp(28px, 5vw, 72px); align-items: center;">
+    <div style="min-width: 0; flex: 1 1 400px;">
+      <sc-if value="{{ showAvailability }}" hint-placeholder-val="{{ true }}">
+        <div style="display: inline-flex; align-items: center; gap: 9px; padding: 7px 14px; border-radius: 999px; border: 1px solid #e3d7cf; background: #fdf3ef; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: #8a5236; margin-bottom: clamp(20px, 3vw, 32px);">
+          <span style="width: 7px; height: 7px; border-radius: 50%; background: #23813B; display: inline-block;"></span>
+          Open to product design roles
+        </div>
+      </sc-if>
+      <h1 style="margin: 0; font-family: 'Poetsen One', Poppins, sans-serif; font-size: clamp(44px, 8.4vw, 104px); line-height: 1; font-weight: 400; letter-spacing: -0.02em; text-wrap: balance;">
+        Hi. I’m <span style="color: #D96827;">Christine</span>,<br>a product designer
+      </h1>
+      <p style="margin: clamp(22px, 3vw, 34px) 0 0; max-width: 46ch; font-size: clamp(17px, 1.6vw, 21px); line-height: 1.6; color: #4a5a60; text-wrap: pretty;">
+        Six years designing SaaS platforms for energy and fintech — turning messy internal tools into workflows agents and finance teams actually trust.
+      </p>
+      <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: clamp(26px, 3.5vw, 40px);">
+        <a href="#work" style="display: inline-flex; align-items: center; gap: 10px; padding: 15px 26px; border-radius: 999px; background: #c2551d; color: #fffdfb; font-size: 16px; font-weight: 500;" style-hover="background: #a84714; color: #fffdfb;">
+          See selected work
+          <span style="font-family: 'IBM Plex Mono', monospace;">↓</span>
+        </a>
+        <a href="mailto:christineanhhoang@gmail.com" style="display: inline-flex; align-items: center; padding: 15px 26px; border-radius: 999px; border: 1px solid #d8cac1; color: #17262b; font-size: 16px; font-weight: 500;" style-hover="border-color: #17262b; color: #17262b;">Get in touch</a>
+      </div>
+    </div>
+    <div style="min-width: 0; flex: 0 1 300px; display: flex; justify-content: center;">
+      <div style="position: relative; width: 100%; max-width: 420px; aspect-ratio: 1;">
+        <div style="position: absolute; inset: 0; border-radius: 50%; background: #e8eee6;"></div>
+        <image-slot id="portrait" shape="circle" placeholder="Portrait photo" style="position: absolute; inset: 0; width: 100%; height: 100%;" src="assets/78532433-c5a9-4d0e-abd4-2d5dbd0fdbaf.webp"></image-slot>
+      </div>
+    </div>
+  </section>
+
+  <sc-if value="{{ showScrollHint }}" hint-placeholder-val="{{ true }}">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 0 28px clamp(56px, 7vw, 96px); display: flex; align-items: center; gap: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #5f6f74;">
+      <span style="color: #c2551d; font-size: 18px; animation: nudge 2.2s ease-in-out infinite; display: inline-block;">↓</span>
+      Scroll to continue
+    </div>
+  </sc-if>
+
+  <section id="about" style="border-top: 1px solid #efe6e0; background: #fffdfb;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(56px, 8vw, 110px) 28px; display: flex; flex-wrap: wrap; gap: clamp(28px, 5vw, 72px);">
+      <div style="flex: 0 1 220px;">
+        <h2 style="font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; margin: 0; font-size: clamp(28px, 3.2vw, 40px); letter-spacing: -0.025em; color: #c2551d; line-height: 1.05;">About me</h2>
+      </div>
+      <div style="min-width: 0; flex: 1 1 440px;">
+        <p style="margin: 0; font-size: clamp(22px, 2.6vw, 34px); line-height: 1.42; font-weight: 400; letter-spacing: -0.02em; text-wrap: pretty; max-width: 34ch;">
+          Design thinking is at the core of my process. I define scope with product managers, pressure-test the technical reality with engineers, and ship work that moves the business.
+        </p>
+        <sc-if value="{{ showStats }}" hint-placeholder-val="{{ true }}">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: #e9ded7; margin-top: clamp(32px, 4vw, 52px); border: 1px solid #e9ded7;">
+            <div style="background: #fffdfb; padding: 24px;">
+              <div style="font-family: 'Poetsen One', Poppins, sans-serif; font-size: clamp(28px, 3.4vw, 42px); font-weight: 400; letter-spacing: -0.02em; color: #23813B;">6 yrs</div>
+              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74; margin-top: 8px;">In SaaS product</div>
+            </div>
+            <div style="background: #fffdfb; padding: 24px;">
+              <div style="font-family: 'Poetsen One', Poppins, sans-serif; font-size: clamp(28px, 3.4vw, 42px); font-weight: 400; letter-spacing: -0.02em; color: #23813B;">3</div>
+              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74; margin-top: 8px;">Markets shipped</div>
+            </div>
+            <div style="background: #fffdfb; padding: 24px;">
+              <div style="font-family: 'Poetsen One', Poppins, sans-serif; font-size: clamp(22px, 2.4vw, 30px); font-weight: 400; letter-spacing: -0.02em; color: #23813B;">Energy <span style="color: #E443B7;">+</span> Fintech</div>
+              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74; margin-top: 8px;">Domains</div>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" style="border-top: 1px solid #efe6e0; background: #F2E4D3;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(56px, 8vw, 110px) 28px;">
+      <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 20px; margin-bottom: clamp(36px, 5vw, 64px);">
+        <div style="flex: 0 1 220px;">
+          <h2 style="font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; margin: 0; font-size: clamp(28px, 3.2vw, 40px); letter-spacing: -0.025em; color: #23813B; line-height: 1.05;">Selected work</h2>
+        </div>
+      </div>
+
+      <a href="service-orders.html" style="display: block; border: 1px solid #e4d9d2; background: #fffdfb; overflow: hidden; margin-bottom: clamp(20px, 2.5vw, 28px); color: #17262b;" style-hover="border-color: #17262b; color: #17262b;">
+        <div style="position: relative; width: 100%; aspect-ratio: 16 / 7; background: #e8eee6;">
+          <image-slot id="work-hero" shape="rect" placeholder="Service orders — hero shot" style="position: absolute; inset: 0; width: 100%; height: 100%;" src="assets/8245f9f8-eb55-4dbe-938d-8c471881933d.webp"></image-slot>
+        </div>
+        <div style="padding: clamp(24px, 3.4vw, 40px); display: flex; flex-wrap: wrap; gap: clamp(16px, 3vw, 48px); align-items: flex-start;">
+          <div style="flex: 1 1 260px;">
+            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: #8a5236; background: #fdf3ef; border: 1px solid #f0ddd3; padding: 5px 10px; border-radius: 999px;">Energy intelligence platform × AGL</span>
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: #6a787d; background: #f3f1ee; border: 1px solid #e7e3de; padding: 5px 10px; border-radius: 999px;">New market launch</span>
+            </div>
+            <h3 style="font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; margin: 0; font-size: clamp(26px, 3.2vw, 40px); letter-spacing: -0.03em; line-height: 1.08;">Service orders</h3>
+          </div>
+          <div style="flex: 1 1 320px;">
+            <p style="margin: 0; font-size: clamp(16px, 1.5vw, 18px); line-height: 1.62; color: #4a5a60; text-wrap: pretty;">We brought on our first Australia-based client and I designed a market-specific tool as part of a large-scale project — including establishing effective ways of working with new team members across multiple time zones.</p>
+            <span style="display: inline-flex; align-items: center; gap: 8px; margin-top: 20px; font-size: 15px; font-weight: 500; color: #c2551d; border-bottom: 1.5px solid #c2551d; padding-bottom: 3px;">Read the case study →</span>
+          </div>
+        </div>
+      </a>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr)); gap: clamp(20px, 2.5vw, 28px);">
+
+        <a href="legacy-contracts.html" style="display: flex; flex-direction: column; border: 1px solid #e4d9d2; background: #fffdfb; color: #17262b;" style-hover="border-color: #17262b; color: #17262b;">
+          <div style="position: relative; width: 100%; aspect-ratio: 4 / 3; background: #e6ecf4;">
+            <image-slot id="work-contracts" shape="rect" placeholder="Legacy contracts page" style="position: absolute; inset: 0; width: 100%; height: 100%;" src="assets/60ed4bd3-ac4a-4d17-865b-9a5a5467edea.webp"></image-slot>
+          </div>
+          <div style="padding: 26px; display: flex; flex-direction: column; gap: 14px; flex: 1;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Energy intelligence platform × OVO Energy</span>
+            <h3 style="font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; margin: 0; font-size: 23px; letter-spacing: -0.02em; line-height: 1.2;">Deprecating a legacy contracts page</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4a5a60;">Research revealed agents were confused by two different tools for managing contracts, which lowered efficiency.</p>
+            <span style="margin-top: auto; font-size: 14px; font-weight: 500; color: #c2551d;">Case study →</span>
+          </div>
+        </a>
+
+        <a href="platform-adoption.html" style="display: flex; flex-direction: column; border: 1px solid #e4d9d2; background: #fffdfb; color: #17262b;" style-hover="border-color: #17262b; color: #17262b;">
+          <div style="position: relative; width: 100%; aspect-ratio: 4 / 3; background: #eef1f5;">
+            <image-slot id="work-adoption" shape="rect" placeholder="Agent platform adoption" style="position: absolute; inset: 0; width: 100%; height: 100%;" src="assets/3d798482-e9fd-42c7-b209-16a400c6aa9e.webp"></image-slot>
+          </div>
+          <div style="padding: 26px; display: flex; flex-direction: column; gap: 14px; flex: 1;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Energy intelligence platform</span>
+            <h3 style="font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; margin: 0; font-size: 23px; letter-spacing: -0.02em; line-height: 1.2;">Pushing adoption of the full feature suite</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4a5a60;">KAE was underutilised when accessed via Salesforce. I researched agent workflows over a two-week study.</p>
+            <span style="margin-top: auto; font-size: 14px; font-weight: 500; color: #c2551d;">Case study →</span>
+          </div>
+        </a>
+
+        <a href="compliance-scripts.html" style="display: flex; flex-direction: column; border: 1px solid #e4d9d2; background: #fffdfb; color: #17262b;" style-hover="border-color: #17262b; color: #17262b;">
+          <div style="position: relative; width: 100%; aspect-ratio: 4 / 3; background: #edefe9;">
+            <image-slot id="work-compliance" shape="rect" placeholder="Compliance script redesign" style="position: absolute; inset: 0; width: 100%; height: 100%;" src="assets/464b0c5d-469d-4455-bdaf-b76bbbdadadc.webp"></image-slot>
+          </div>
+          <div style="padding: 26px; display: flex; flex-direction: column; gap: 14px; flex: 1;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Energy intelligence platform</span>
+            <h3 style="font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; margin: 0; font-size: 23px; letter-spacing: -0.02em; line-height: 1.2;">Readable compliance scripts for agents</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4a5a60;">Redesigned the move-in compliance script from feedback gathered through a questionnaire with the compliance team.</p>
+            <span style="margin-top: auto; font-size: 14px; font-weight: 500; color: #c2551d;">Case study →</span>
+          </div>
+        </a>
+
+        <a href="funding-structure.html" style="display: flex; flex-direction: column; border: 1px solid #e4d9d2; background: #fffdfb; color: #17262b;" style-hover="border-color: #17262b; color: #17262b;">
+          <div style="position: relative; width: 100%; aspect-ratio: 4 / 3; background: #1b1b1f;">
+            <image-slot id="work-funding" shape="rect" placeholder="Soldo funding structure" style="position: absolute; inset: 0; width: 100%; height: 100%;" src="assets/d236fd41-d2cc-4f11-a9d4-e197b65dbdd8.webp"></image-slot>
+          </div>
+          <div style="padding: 26px; display: flex; flex-direction: column; gap: 14px; flex: 1;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Soldo</span>
+            <h3 style="font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; margin: 0; font-size: 23px; letter-spacing: -0.02em; line-height: 1.2;">A streamlined funding structure</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4a5a60;">Cards could draw funds directly from the company account while preserving the existing per-user allocation.</p>
+            <span style="margin-top: auto; font-size: 14px; font-weight: 500; color: #c2551d;">Case study →</span>
+          </div>
+        </a>
+
+        <a href="strong-customer-authentication.html" style="display: flex; flex-direction: column; border: 1px solid #e4d9d2; background: #fffdfb; color: #17262b;" style-hover="border-color: #17262b; color: #17262b;">
+          <div style="position: relative; width: 100%; aspect-ratio: 4 / 3; background: #1b1b1f;">
+            <image-slot id="work-sca" shape="rect" placeholder="Strong Customer Authentication" style="position: absolute; inset: 0; width: 100%; height: 100%;" src="assets/9c4df12f-fdb3-450a-ad82-467c1bf9345c.webp"></image-slot>
+          </div>
+          <div style="padding: 26px; display: flex; flex-direction: column; gap: 14px; flex: 1;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Soldo</span>
+            <h3 style="font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; margin: 0; font-size: 23px; letter-spacing: -0.02em; line-height: 1.2;">Strong Customer Authentication</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4a5a60;">Added a layer of security to meet the Payment Services Regulations without adding friction to daily use.</p>
+            <span style="margin-top: auto; font-size: 14px; font-weight: 500; color: #c2551d;">Case study →</span>
+          </div>
+        </a>
+
+        <div style="display: flex; flex-direction: column; justify-content: center; gap: 16px; padding: 30px; border: 1px dashed #d8cac1;">
+          <h3 style="font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; margin: 0; font-size: 23px; letter-spacing: -0.02em; line-height: 1.25;">Curious about something not shown here?</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4a5a60;">Some work sits under NDA. Happy to walk through it in a conversation.</p>
+          <a href="#contact" style="font-size: 15px; font-weight: 500; color: #c2551d;">Ask me →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="approach" style="border-top: 1px solid #efe6e0; background: #fffdfb;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(56px, 8vw, 110px) 28px; display: flex; flex-wrap: wrap; gap: clamp(28px, 5vw, 72px);">
+      <div style="flex: 0 1 220px;">
+        <h2 style="font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; margin: 0; font-size: clamp(28px, 3.2vw, 40px); letter-spacing: -0.025em; color: #23813B; line-height: 1.05;">How I work</h2>
+      </div>
+      <div style="min-width: 0; flex: 1 1 440px;">
+        <p style="margin: 0 0 clamp(36px, 4.5vw, 56px); font-size: clamp(19px, 2vw, 26px); line-height: 1.5; letter-spacing: -0.015em; max-width: 40ch; text-wrap: pretty;">
+          I’ve worked in startups leading product development and in scaling companies integrating with client systems. Different challenges, same core principles.
+        </p>
+        <div style="display: flex; flex-direction: column;">
+          <div style="display: flex; gap: clamp(16px, 2.5vw, 32px); padding: clamp(22px, 3vw, 32px) 0; border-top: 1px solid #E443B7;">
+            <div style="flex: 0 0 36px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 700; color: #E443B7; padding-top: 6px;">01</div>
+            <div style="min-width: 0;">
+              <h3 style="font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; margin: 0 0 12px; font-size: clamp(20px, 2.1vw, 27px); letter-spacing: -0.02em; color: #23813B;">Solving the right problems</h3>
+              <p style="margin: 0; font-size: 16px; line-height: 1.66; color: #5b6a70; max-width: 62ch; text-wrap: pretty;">I understand the real problem before jumping to solutions, working closely with product managers and engineers to explore constraints, timelines and opportunities — so the final experience is both feasible and impactful.</p>
+            </div>
+          </div>
+          <div style="display: flex; gap: clamp(16px, 2.5vw, 32px); padding: clamp(22px, 3vw, 32px) 0; border-top: 1px solid #E443B7;">
+            <div style="flex: 0 0 36px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 700; color: #E443B7; padding-top: 6px;">02</div>
+            <div style="min-width: 0;">
+              <h3 style="font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; margin: 0 0 12px; font-size: clamp(20px, 2.1vw, 27px); letter-spacing: -0.02em; color: #23813B;">User-centred design thinking</h3>
+              <p style="margin: 0; font-size: 16px; line-height: 1.66; color: #5b6a70; max-width: 62ch; text-wrap: pretty;">I advocate for user research and run usability testing regularly, validating design decisions through both qualitative and quantitative data.</p>
+            </div>
+          </div>
+          <div style="display: flex; gap: clamp(16px, 2.5vw, 32px); padding: clamp(22px, 3vw, 32px) 0; border-top: 1px solid #E443B7; border-bottom: 1px solid #E443B7;">
+            <div style="flex: 0 0 36px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 700; color: #E443B7; padding-top: 6px;">03</div>
+            <div style="min-width: 0;">
+              <h3 style="font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; margin: 0 0 12px; font-size: clamp(20px, 2.1vw, 27px); letter-spacing: -0.02em; color: #23813B;">Decision making in the open</h3>
+              <p style="margin: 0; font-size: 16px; line-height: 1.66; color: #5b6a70; max-width: 62ch; text-wrap: pretty;">I document trade-offs as I go so teams can see why a direction was chosen — and revisit it confidently when the context changes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="background: #fffdfb;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(64px, 9vw, 130px) 28px; display: flex; flex-wrap: wrap; gap: clamp(28px, 5vw, 72px);">
+      <h2 style="font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; margin: 0; flex: 0 1 220px; font-size: clamp(28px, 3.2vw, 40px); letter-spacing: -0.025em; color: #c2551d; line-height: 1.05;">Let’s work together</h2>
+      <div style="min-width: 0; flex: 1 1 440px;">
+        <p style="margin: 0 0 clamp(24px, 3vw, 36px); font-size: clamp(17px, 1.6vw, 20px); line-height: 1.6; color: #4a5a60; max-width: 48ch; text-wrap: pretty;">Have a project in mind, or a role you think I’d fit? I’d love to have a chat.</p>
+        <a href="mailto:christineanhhoang@gmail.com" style="display: inline-block; font-size: clamp(22px, 4.2vw, 52px); font-weight: 600; letter-spacing: -0.035em; color: #17262b; border-bottom: 2px solid #f0ddd3; padding-bottom: 6px; word-break: break-word;" style-hover="border-bottom-color: #c2551d; color: #c2551d;">christineanhhoang@gmail.com</a>
+        <div style="display: flex; flex-wrap: wrap; gap: 26px; margin-top: clamp(28px, 3.5vw, 40px); font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase;">
+          <a href="https://www.linkedin.com/" style="color: #17262b; border-bottom: 1px solid #d8cac1; padding-bottom: 3px;">LinkedIn</a>
+          <a href="https://www.behance.net/" style="color: #17262b; border-bottom: 1px solid #d8cac1; padding-bottom: 3px;">Behance</a>
+          <a href="https://dribbble.com/" style="color: #17262b; border-bottom: 1px solid #d8cac1; padding-bottom: 3px;">Dribbble</a>
+          <a href="Christineanhhoang_CV2026_FINAL.pdf" target="_blank" rel="noopener" style="color: #17262b; border-bottom: 1px solid #d8cac1; padding-bottom: 3px;">CV / Résumé</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background: #c2551d; color: #fffdfb;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(36px, 5vw, 56px) 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px;">
+      <div style="font-size: 15px; font-weight: 500;">Christine Anh Hoang — Product Designer</div>
+      <nav style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 15px;">
+        <a href="#top" style="color: #fffdfb;">Home</a>
+        <a href="about.html" style="color: #fffdfb;">About</a>
+        <a href="#work" style="color: #fffdfb;">Work</a>
+        <a href="#contact" style="color: #fffdfb;">Contact</a>
+      </nav>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #fff4ec;">© 2026 · London</div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;showAvailability&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Hero&quot;},&quot;showScrollHint&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Hero&quot;},&quot;showStats&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;About&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      showAvailability: this.props.showAvailability ?? true,
+      showScrollHint: this.props.showScrollHint ?? true,
+      showStats: this.props.showStats ?? true
+    };
+  }
+}
+</script>
+
+
+</body></html>

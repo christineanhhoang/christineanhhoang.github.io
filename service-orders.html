@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="assets/a816978d-f0f5-470f-b7e2-54828e711b88.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<style>/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v23/-F63fjptAgt5VM-kVkqdyU8n1iIq131nj-otFQ.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v23/-F63fjptAgt5VM-kVkqdyU8n1isq131nj-otFQ.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v23/-F63fjptAgt5VM-kVkqdyU8n1pUL8lJPheIVLNg.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v23/-F63fjptAgt5VM-kVkqdyU8n1iAq131nj-otFQ.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v23/-F63fjptAgt5VM-kVkqdyU8n1iEq131nj-otFQ.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v23/-F63fjptAgt5VM-kVkqdyU8n1i8q131nj-o.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v23/-F6qfjptAgt5VM-kVkqdyU8n3twJwl1FgsAXHNlYzg.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v23/-F6qfjptAgt5VM-kVkqdyU8n3twJwlRFgsAXHNlYzg.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v23/-F6qfjptAgt5VM-kVkqdyU8n3twJwupkp-8_FtFg95o.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v23/-F6qfjptAgt5VM-kVkqdyU8n3twJwl9FgsAXHNlYzg.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v23/-F6qfjptAgt5VM-kVkqdyU8n3twJwl5FgsAXHNlYzg.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexmono/v23/-F6qfjptAgt5VM-kVkqdyU8n3twJwlBFgsAXHNk.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poetsen One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poetsenone/v3/ke8hOgIaMUB37xCgvCntWuImofOzEqG8vb8.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poetsen One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poetsenone/v3/ke8hOgIaMUB37xCgvCntWuIoofOzEqG8.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* devanagari */
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/1badf5a5-e3d8-429d-97eb-115e8ab20576.woff2") format('woff2');
+  unicode-range: U+0900-097F, U+1CD0-1CF4, U+1CF7-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B0A;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/bba15a40-5092-462f-a570-1a5059d5f926.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/7d65f956-0c97-4451-aa80-9ca825386621.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* devanagari */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("assets/616c81c6-77be-4a51-9dcb-4360f56a7f92.woff2") format('woff2');
+  unicode-range: U+0900-097F, U+1CD0-1CF4, U+1CF7-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B0A;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("assets/9e6ceec3-cd5a-4ee3-890f-d043d6fc3906.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("assets/976cc80a-296c-4957-992c-70d621689583.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* devanagari */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/d4eca077-922a-405c-88be-d48f30de0742.woff2") format('woff2');
+  unicode-range: U+0900-097F, U+1CD0-1CF4, U+1CF7-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B0A;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/62f2716c-3d6e-4482-aaca-a88e1df5fc52.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/701604ee-f766-486d-b266-9dbdf5f0a315.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* devanagari */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/7fbfef27-b998-4912-9616-ada57bd472a0.woff2") format('woff2');
+  unicode-range: U+0900-097F, U+1CD0-1CF4, U+1CF7-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B0A;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/10fe3b41-d686-461a-aa24-14001fd7e1d0.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/5c06d5ce-ac90-45c4-b396-ce612a611a27.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* devanagari */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/f91694f0-1b62-41d6-8bbb-4b978fa622f6.woff2") format('woff2');
+  unicode-range: U+0900-097F, U+1CD0-1CF4, U+1CF7-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B0A;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/f44471e2-19cd-41bf-9f97-fcc44dbd0d7d.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/6875ab54-1c9a-41c0-b618-a01aaf6c2b47.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* devanagari */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/c32dff54-185e-433a-9a68-17f4cd32d94e.woff2") format('woff2');
+  unicode-range: U+0900-097F, U+1CD0-1CF4, U+1CF7-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B0A;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/424ecee6-c304-4c7b-993e-67f5ab37f44b.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/c3f57b81-db9f-49ff-8db7-a0f4d0c21da9.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<script src="assets/8e6168a4-1709-45cc-bd7b-9ecb44f3d131.js"></script>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #fffdfb; -webkit-font-smoothing: antialiased; }
+  a { color: #A9481A; text-decoration: none; }
+  a:hover { color: #23813B; }
+  ::selection { background: #F9D3EF; }
+  /* Brand colours: primary #D96827, primary text #A9481A, secondary #23813B, accent #E443B7, neutral #DFD0BD */
+  [style*="color: #c2551d"], [style*="color: rgb(194, 85, 29)"] { color: #A9481A !important; }
+  h1[style*="color: #c2551d"], h1[style*="color: rgb(194, 85, 29)"], h2[style*="color: #c2551d"], h2[style*="color: rgb(194, 85, 29)"] { color: #D96827 !important; }
+  footer[style*="background: #c2551d"], footer[style*="background: rgb(194, 85, 29)"] { background: #A9481A !important; }
+  div[aria-hidden="true"][style*="background: #c2551d"], div[aria-hidden="true"][style*="background: rgb(194, 85, 29)"] { background: #D96827 !important; }
+  span[style*="background: #c2551d"], span[style*="background: rgb(194, 85, 29)"], button[style*="background: #c2551d"], button[style*="background: rgb(194, 85, 29)"] { background: #23813B !important; }
+  [style*="background: #fdf3ef"], [style*="background: rgb(253, 243, 239)"] { background: #F5EEE6 !important; }
+  [style*="background: #fdf9f6"], [style*="background: rgb(253, 249, 246)"] { background: #FAF6F1 !important; }
+  [style*="background: #f3efec"], [style*="background: rgb(243, 239, 236)"], [style*="background: #e8eee6"], [style*="background: rgb(232, 238, 230)"] { background: #F2EBE2 !important; }
+  [style*="#efe6e0"], [style*="rgb(239, 230, 224)"], [style*="#e9ded7"], [style*="rgb(233, 222, 215)"], [style*="#f0e8e3"], [style*="rgb(240, 232, 227)"] { border-color: #E8DDD0 !important; }
+  [style*="#ecd9cf"], [style*="rgb(236, 217, 207)"], [style*="#f0ddd3"], [style*="rgb(240, 221, 211)"] { border-color: #DFD0BD !important; }
+  blockquote { border-left-color: #E443B7 !important; }
+  [style*="color: #4a5a60"], [style*="color: rgb(74, 90, 96)"] { color: #2E3B40 !important; }
+  [style*="color: #5b6a70"], [style*="color: rgb(91, 106, 112)"] { color: #34434A !important; }
+  [style*="color: #5f6f74"], [style*="color: rgb(95, 111, 116)"] { color: #3A494F !important; }
+  figcaption { font-family: Poppins, system-ui, sans-serif !important; font-weight: 700 !important; letter-spacing: 0 !important; }
+  figcaption > span:not([style*="999px"]) { font-weight: 700 !important; }
+  a[style*="border-radius: 999px"][style*="#d8cac1"], a[style*="border-radius: 999px"][style*="rgb(216, 202, 193)"], a[href="#contact"][style*="border-radius: 999px"] { background: #E443B7 !important; color: #000000 !important; border-color: #E443B7 !important; }
+  a[style*="border-radius: 999px"][style*="#d8cac1"]:hover, a[style*="border-radius: 999px"][style*="rgb(216, 202, 193)"]:hover, a[href="#contact"][style*="border-radius: 999px"]:hover { background: #EE7DCF !important; border-color: #EE7DCF !important; color: #000000 !important; }
+  html { scroll-behavior: smooth; }
+  .nav-dd .nav-dd-menu { display: none; }
+  .nav-dd:hover .nav-dd-menu, .nav-dd:focus-within .nav-dd-menu { display: block; }
+</style>
+</helmet>
+<div style="font-family: Poppins, system-ui, sans-serif; color: #17262b; background: #fffdfb; overflow-x: hidden;">
+
+  <header style="position: sticky; top: 0; z-index: 50; background: rgba(255,253,251,0.88); backdrop-filter: blur(12px); border-bottom: 1px solid #efe6e0;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 16px 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;">
+      <a href="index.html" style="font-size: 15px; font-weight: 600; letter-spacing: -0.01em; color: #17262b;">Christine Anh Hoang</a>
+      <nav style="display: flex; align-items: center; gap: clamp(16px, 3vw, 40px); font-size: 15px; font-weight: 500;">
+        <a href="index.html" style="color: #17262b;">Home</a>
+        <a href="about.html" style="color: #17262b;">About</a>
+        <div class="nav-dd" style="position: relative; display: inline-flex;">
+        <a href="index.html#work" style="display: inline-flex; align-items: center; gap: 6px; color: #c2551d;">Work<span style="font-size: 9px; line-height: 1;">▾</span></a>
+        <div class="nav-dd-menu" style="position: absolute; top: 100%; left: 50%; transform: translateX(-50%); padding-top: 14px; min-width: 288px; z-index: 60;">
+          <div style="background: #fffdfb; border: 1px solid #e9ded7; box-shadow: 0 14px 36px rgba(23,38,43,0.12); padding: 6px; display: flex; flex-direction: column;">
+        <a href="service-orders.html" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 14px; color: #17262b; font-size: 14px; font-weight: 500; line-height: 1.35;" style-hover="background: #fdf3ef; color: #c2551d;">
+          <span>Service orders</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Kaluza × AGL</span>
+        </a>
+        <a href="legacy-contracts.html" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 14px; color: #17262b; font-size: 14px; font-weight: 500; line-height: 1.35;" style-hover="background: #fdf3ef; color: #c2551d;">
+          <span>Deprecating a legacy contracts page</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Kaluza × OVO</span>
+        </a>
+        <a href="platform-adoption.html" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 14px; color: #17262b; font-size: 14px; font-weight: 500; line-height: 1.35;" style-hover="background: #fdf3ef; color: #c2551d;">
+          <span>Pushing adoption of the full feature suite</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Kaluza</span>
+        </a>
+        <a href="compliance-scripts.html" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 14px; color: #17262b; font-size: 14px; font-weight: 500; line-height: 1.35;" style-hover="background: #fdf3ef; color: #c2551d;">
+          <span>Readable compliance scripts for agents</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Kaluza</span>
+        </a>
+        <a href="funding-structure.html" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 14px; color: #17262b; font-size: 14px; font-weight: 500; line-height: 1.35;" style-hover="background: #fdf3ef; color: #c2551d;">
+          <span>A streamlined funding structure</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Soldo</span>
+        </a>
+        <a href="strong-customer-authentication.html" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 14px; color: #17262b; font-size: 14px; font-weight: 500; line-height: 1.35;" style-hover="background: #fdf3ef; color: #c2551d;">
+          <span>Strong Customer Authentication</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Soldo</span>
+        </a>
+            <a href="index.html#work" style="padding: 10px 14px; margin-top: 4px; border-top: 1px solid #f0e8e3; color: #c2551d; font-size: 13px; font-weight: 500;" style-hover="background: #fdf3ef; color: #c2551d;">All work →</a>
+          </div>
+        </div>
+      </div>
+        <a href="#contact" style="display: inline-flex; align-items: center; padding: 9px 18px; border-radius: 999px; background: #17262b; color: #fffdfb; font-weight: 500;" style-hover="background: #c2551d; color: #fffdfb;">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section style="max-width: 1240px; margin: 0 auto; padding: clamp(40px, 6vw, 80px) 28px clamp(28px, 4vw, 48px);">
+    <a href="index.html#work" style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.04em; color: #5f6f74;" style-hover="color: #c2551d;">← All work</a>
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin: 26px 0 20px;">
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: #8a5236; background: #fdf3ef; border: 1px solid #f0ddd3; padding: 6px 12px; border-radius: 999px;">Kaluza × AGL</span>
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: #4a5a60; background: #f3f1ee; border: 1px solid #e7e3de; padding: 6px 12px; border-radius: 999px;">New market launch</span>
+    </div>
+    <h1 style="margin: 0; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(40px, 7vw, 86px); line-height: 1.02; letter-spacing: -0.02em; text-wrap: balance;">Service orders</h1>
+    <div style="margin: clamp(20px, 3vw, 30px) 0 0; max-width: 58ch; font-size: clamp(17px, 1.6vw, 21px); line-height: 1.6; color: #4a5a60; text-wrap: pretty;"><div>We brought on our first Australia-based client, and I designed a market-specific tool as part of a large-scale project.<br><br>This involved establishing effective ways of working with new team members across multiple time zones.</div></div>
+  </section>
+
+  <section style="max-width: 1240px; margin: 0 auto; padding: 0 28px clamp(40px, 5vw, 64px);">
+    <div style="position: relative; width: 100%; aspect-ratio: 16 / 8; background: #e8eee6;">
+      <image-slot id="so-hero" shape="rect" placeholder="Hero image" style="position: absolute; inset: 0; width: 100%; height: 100%;" src="assets/2304844c-08b8-4c34-af9a-843238aa7699.webp"></image-slot>
+    </div>
+  </section>
+
+  <section style="border-top: 1px solid #efe6e0; background: #fffdfb;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(40px, 5vw, 64px) 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); gap: clamp(20px, 3vw, 40px); justify-content: flex-start">
+      <div>
+        <div style="font-family: 'Poetsen One', Poppins, sans-serif; font-size: 22px; letter-spacing: -0.01em; color: #23813B; margin-bottom: 8px;">Role</div>
+        <div style="font-size: 16px; line-height: 1.55; color: #17262b;">Product Designer</div>
+      </div>
+      <div>
+        <div style="font-family: 'Poetsen One', Poppins, sans-serif; font-size: 22px; letter-spacing: -0.01em; color: #23813B; margin-bottom: 8px;">Team</div>
+        <div style="font-size: 16px; line-height: 1.55; color: #17262b;"><div>Product designer (Me), product manager, front and back end engineers, client stakeholders.</div></div>
+      </div>
+      <div>
+        <div style="font-family: 'Poetsen One', Poppins, sans-serif; font-size: 22px; letter-spacing: -0.01em; color: #23813B; margin-bottom: 8px;">Sprint</div>
+        <div style="font-size: 16px; line-height: 1.55; color: #17262b;">7 Months​</div>
+      </div>
+      
+    </div>
+  </section>
+
+  <section style="border-top: 1px solid #efe6e0; background: #fffdfb;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(52px, 7vw, 96px) 28px; display: flex; flex-wrap: wrap; gap: clamp(28px, 5vw, 72px);">
+      <div style="flex: 0 1 220px;">
+        <h2 style="margin: 0; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(26px, 3vw, 36px); letter-spacing: -0.02em; color: #D96827; line-height: 1.08;">The problem</h2>
+      </div>
+      <div style="flex: 1 1 440px; min-width: 0;">
+        
+        <p style="margin: 18px 0 0; font-size: 16px; line-height: 1.66; color: #5b6a70; max-width: 64ch; text-wrap: pretty;">Our new client was due to migrate their services onto our platform. However, they needed a way to submit job requests to energise and de-energise properties to meet regulatory compliance requirements and avoid significant fines.</p>
+        <div style="display: flex; flex-direction: column; margin-top: clamp(28px, 3.5vw, 40px);">
+        <div style="display: flex; gap: clamp(16px, 2.5vw, 32px); padding: clamp(20px, 2.6vw, 28px) 0; border-top: 1px solid #E443B7;">
+          <div style="flex: 0 0 36px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 700; color: #E443B7; padding-top: 5px;">01</div>
+          <div style="min-width: 0;">
+            <h3 style="margin: 0 0 10px; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(19px, 2vw, 24px); letter-spacing: -0.01em; color: #23813B;"><div><span style="font-size: 21.46px;"><h3 style="margin: 0px 0px 10px; font-weight: 400; font-size: clamp(19px, 2vw, 24px); letter-spacing: -0.01em;"><span style="letter-spacing: -0.2146px;">My responsibilities​</span></h3></span></div></h3>
+            <p style="margin: 0; font-size: 16px; line-height: 1.66; color: #5b6a70; max-width: 62ch; text-wrap: pretty;">I led the discovery of service orders, facilitated workshops with product managers and engineers for scope alignment, designed wireframes, prototypes, and high-fidelity designs, user research and usability testing, managed stakeholder feedback and iterations.​</p>
+          </div>
+        </div>
+        <div style="display: flex; gap: clamp(16px, 2.5vw, 32px); padding: clamp(20px, 2.6vw, 28px) 0; border-top: 1px solid #E443B7;">
+          <div style="flex: 0 0 36px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 700; color: #E443B7; padding-top: 5px;">02</div>
+          <div style="min-width: 0;">
+            <h3 style="margin: 0 0 10px; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(19px, 2vw, 24px); letter-spacing: -0.01em; color: #23813B;"><span style="letter-spacing: -0.2146px;"><h3 style="margin: 0px 0px 10px; font-weight: 400; font-size: clamp(19px, 2vw, 24px); letter-spacing: -0.01em;">The challenge​</h3></span></h3>
+            <p style="margin: 0; font-size: 16px; line-height: 1.66; color: #5b6a70; max-width: 62ch; text-wrap: pretty;">This project involved a new client without a formal user research process, so I relied on their product managers and energy experts for industry and user insights.</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section style="border-top: 1px solid #efe6e0; background: #F8EAF6;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(52px, 7vw, 88px) 28px;">
+      <h2 style="margin: 0 0 clamp(24px, 3vw, 36px); font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(26px, 3vw, 36px); letter-spacing: -0.02em; color: #c2551d;">Design sprint​</h2>
+      <div style="font-size: 17.168px"><span style="font-size: 17.168px;">I led a design sprint with product managers and engineers, defining the problem space, finalising the scope, and using Crazy 8’s sketches to align on the vision.</span></div><p style="margin: 0 0 clamp(20px, 3vw, 30px); font-size: clamp(17px, 1.6vw, 20px); line-height: 1.6; color: #4a5a60; max-width: 48ch; text-wrap: pretty;"><br></p><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: clamp(16px, 2vw, 24px);">
+        <div style="position: relative; aspect-ratio: 4 / 3; background: #e8eee6;">
+          <image-slot id="so-shot-1" shape="rect" placeholder="Screen or artefact" style="position: absolute; inset: 0; width: 100%; height: 100%;" src="assets/611a9f65-ffc9-444a-8689-7aaa06e9c1e2.webp"></image-slot>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top: 1px solid #efe6e0; background: #F8EAF6;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(52px, 7vw, 88px) 28px;">
+      <h2 style="margin: 0 0 clamp(24px, 3vw, 36px); font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(26px, 3vw, 36px); letter-spacing: -0.02em; color: #c2551d;">User Journey​</h2>
+      <div style="font-size: 17.168px"><span style="font-size: 17.168px;">I mapped the user journey, sketched initial designs on paper, and created mocks. After sharing them with stakeholders, product managers, and engineers, we identified issues with service order timing - if two orders were in flight, one risked rejection.</span></div>
+      <div style="position: relative; margin: clamp(20px, 3vw, 30px) 0 10px; border: 1px solid #ecd9cf; background: #e9e6e4;">
+        <div ref="{{ jRef }}" sc-camel-on-pointer-down="{{ jDown }}" sc-camel-on-pointer-move="{{ jMove }}" sc-camel-on-pointer-up="{{ jUp }}" sc-camel-on-pointer-cancel="{{ jUp }}" sc-camel-on-double-click="{{ jDouble }}" style="{{ jBoxStyle }}">
+          <img src="assets/e573130b-d9b1-41b8-9e43-64457da8b37d.png" draggable="false" alt="Create service order user journey: from the KAE home page through search, account selection, service order details, validation and submission, with status outcomes" style="{{ jImgStyle }}">
+        </div>
+        <div style="position: absolute; right: 14px; bottom: 14px; display: flex; align-items: center; gap: 4px; padding: 4px; border-radius: 999px; background: #17262b; color: #fffdfb; font-family: Poppins, sans-serif; font-size: 14px; font-weight: 500; box-shadow: 0 8px 20px -10px rgba(0,0,0,0.5);">
+          <button type="button" sc-camel-on-click="{{ jOut }}" aria-label="Zoom out" style="width: 36px; height: 36px; border-radius: 999px; border: 0; background: transparent; color: #fffdfb; font-size: 20px; line-height: 1; cursor: pointer;" style-hover="background: #c2551d;">−</button>
+          <span aria-live="polite" style="min-width: 48px; text-align: center; font-family: 'IBM Plex Mono', monospace; font-size: 13px;">{{ jLabel }}</span>
+          <button type="button" sc-camel-on-click="{{ jIn }}" aria-label="Zoom in" style="width: 36px; height: 36px; border-radius: 999px; border: 0; background: transparent; color: #fffdfb; font-size: 20px; line-height: 1; cursor: pointer;" style-hover="background: #c2551d;">+</button>
+          <button type="button" sc-camel-on-click="{{ jFit }}" style="height: 36px; padding: 0 14px; border-radius: 999px; border: 0; background: transparent; color: #fffdfb; font-family: Poppins, sans-serif; font-size: 14px; cursor: pointer;" style-hover="background: #c2551d;">Fit</button>
+        </div>
+      </div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.04em; color: #5b6a70;">Use + / − or pinch to zoom · drag to move around · double-click to zoom in</div>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; margin: 18px 0 clamp(40px, 5vw, 64px);">
+        <a href="https://miro.com/app/live-embed/uXjVJQm8svw=/?embedMode=view_only_without_ui&amp;moveToViewport=-4893,5268,8117,3593&amp;embedId=677833725286" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; border-radius: 999px; border: 1px solid #d8cac1; color: #17262b; font-size: 15px; font-weight: 500;" style-hover="border-color: #17262b; color: #17262b;">Open board in Miro ↗</a>
+      </div><h2 style="margin: 0 0 clamp(24px, 3vw, 36px); font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(26px, 3vw, 36px); letter-spacing: -0.02em; color: #c2551d;">Service map​</h2><span style="font-size: 17.168px;">To align front-end design with backend development, I created a service map outlining system behaviour when a service order is sent, reaches the gateway, and reaches the participant. This identifies status types, errors, and completion timings. I mapped the user journey, sketched initial designs on paper, and created mocks. After sharing them with stakeholders, product managers, and engineers, we identified issues with service order timing, if two orders were in flight, one risked rejection.</span><p style="margin: 0 0 clamp(20px, 3vw, 30px); font-size: clamp(17px, 1.6vw, 20px); line-height: 1.6; color: #4a5a60; max-width: 48ch; text-wrap: pretty;"><br></p><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: clamp(16px, 2vw, 24px);">
+        <div style="grid-column: 1 / -1;">
+        <div style="position: relative; margin: 0 0 10px; border: 1px solid #ecd9cf; background: #e9e6e4;">
+          <div ref="{{ mRef }}" sc-camel-on-pointer-down="{{ mDown }}" sc-camel-on-pointer-move="{{ mMove }}" sc-camel-on-pointer-up="{{ mUp }}" sc-camel-on-pointer-cancel="{{ mUp }}" sc-camel-on-double-click="{{ mDouble }}" style="{{ mBoxStyle }}">
+            <img src="assets/6542c48c-d70c-4220-9900-8683cedbbc5b.png" draggable="false" alt="Cancel and re-energisation service map: swimlanes for the agent's actions, what the agent sees, the Kaluza system, MDH and the distributor" style="{{ mImgStyle }}">
+          </div>
+          <div style="position: absolute; right: 14px; bottom: 14px; display: flex; align-items: center; gap: 4px; padding: 4px; border-radius: 999px; background: #17262b; color: #fffdfb; font-family: Poppins, sans-serif; font-size: 14px; font-weight: 500; box-shadow: 0 8px 20px -10px rgba(0,0,0,0.5);">
+            <button type="button" sc-camel-on-click="{{ mOut }}" aria-label="Zoom out" style="width: 36px; height: 36px; border-radius: 999px; border: 0; background: transparent; color: #fffdfb; font-size: 20px; line-height: 1; cursor: pointer;" style-hover="background: #c2551d;">−</button>
+            <span aria-live="polite" style="min-width: 48px; text-align: center; font-family: 'IBM Plex Mono', monospace; font-size: 13px;">{{ mLabel }}</span>
+            <button type="button" sc-camel-on-click="{{ mIn }}" aria-label="Zoom in" style="width: 36px; height: 36px; border-radius: 999px; border: 0; background: transparent; color: #fffdfb; font-size: 20px; line-height: 1; cursor: pointer;" style-hover="background: #c2551d;">+</button>
+            <button type="button" sc-camel-on-click="{{ mFit }}" style="height: 36px; padding: 0 14px; border-radius: 999px; border: 0; background: transparent; color: #fffdfb; font-family: Poppins, sans-serif; font-size: 14px; cursor: pointer;" style-hover="background: #c2551d;">Fit</button>
+          </div>
+        </div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.04em; color: #5b6a70;">Use + / − or pinch to zoom · drag to move around · double-click to zoom in</div>
+        </div>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px;">
+        <a href="https://miro.com/app/live-embed/uXjVJQm8svw=/?embedMode=view_only_without_ui&amp;moveToViewport=-4893,5268,8117,3593&amp;embedId=677833725286" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; border-radius: 999px; border: 1px solid #d8cac1; color: #17262b; font-size: 15px; font-weight: 500;" style-hover="border-color: #17262b; color: #17262b;">Open live board in Miro ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top: 1px solid #efe6e0; background: #fffdfb;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(52px, 7vw, 88px) 28px;">
+      <h2 style="margin: 0 0 clamp(24px, 3vw, 36px); font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(26px, 3vw, 36px); letter-spacing: -0.02em; color: #c2551d;">Starting point</h2>
+      <div style="font-size: 17.168px; line-height: 1.6; color: #4a5a60; max-width: 64ch; text-wrap: pretty; margin-bottom: clamp(24px, 3vw, 36px);">The initial design started from the homepage outside the customer account. I later learned most agents access service orders from the customer account, though the original journey supports customers without one. I then created an alternative journey starting from the customer account page.</div>
+      <div style="display: flex; flex-wrap: wrap; align-items: stretch; gap: 16px;">
+        <figure style="margin: 0; flex: 1 1 320px; display: flex; flex-direction: column; gap: 12px;">
+          <figcaption style="display: flex; align-items: center; gap: 10px;">
+            <span style="padding: 4px 10px; border-radius: 999px; background: #e7e2de; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.06em; color: #3d4a4f;">V1</span>
+            <span style="font-size: 15px; font-weight: 500;">From the homepage, outside the account</span>
+          </figcaption>
+          <button type="button" sc-camel-on-click="{{ openStart1 }}" aria-label="View V1 full size" style="flex: 1; width: 100%; display: flex; flex-direction: column; gap: 10px; padding: 0; border: 0; background: none; cursor: zoom-in; font: inherit; color: #17262b; text-align: left;" style-hover="color: #c2551d;">
+            <span style="display: flex; align-items: center; justify-content: center; width: 100%; aspect-ratio: 4 / 3; background: #f3efec; border: 1px solid #ecd9cf; padding: 16px;">
+              <img src="assets/57c6e511-1527-4e5a-bbf2-288f5dc1fccd.png" alt="V1: Create service orders page with meter point, address and name search" style="display: block; max-width: 100%; max-height: 100%;">
+            </span>
+            <span aria-hidden="true" style="align-self: flex-end; display: inline-flex; align-items: center; gap: 6px; font-family: Poppins, sans-serif; font-size: 14px; font-weight: 500; text-decoration: underline; text-underline-offset: 4px;">View full size <span style="font-size: 15px; text-decoration: none;">⤢</span></span>
+          </button>
+        </figure>
+        <div aria-hidden="true" style="flex: 0 0 auto; align-self: center; width: 44px; height: 44px; border-radius: 999px; background: #c2551d; color: #fffdfb; display: flex; align-items: center; justify-content: center; font-size: 20px;">→</div>
+        <figure style="margin: 0; flex: 1 1 320px; display: flex; flex-direction: column; gap: 12px;">
+          <figcaption style="display: flex; align-items: center; gap: 10px;">
+            <span style="padding: 4px 10px; border-radius: 999px; background: #c2551d; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.06em; color: #fffdfb;">V2</span>
+            <span style="font-size: 15px; font-weight: 500;">From the customer account, via the side nav</span>
+          </figcaption>
+          <button type="button" sc-camel-on-click="{{ openStart2 }}" aria-label="View V2 full size" style="flex: 1; width: 100%; display: flex; flex-direction: column; gap: 10px; padding: 0; border: 0; background: none; cursor: zoom-in; font: inherit; color: #17262b; text-align: left;" style-hover="color: #c2551d;">
+            <span style="display: flex; align-items: center; justify-content: center; width: 100%; aspect-ratio: 4 / 3; background: #f3efec; border: 1px solid #ecd9cf; padding: 16px;">
+              <img src="assets/d269f697-d67a-4dde-a1a4-5d53fba844e4.png" alt="V2: Customer account home with Service orders added to the side navigation" style="display: block; max-width: 100%; max-height: 100%;">
+            </span>
+            <span aria-hidden="true" style="align-self: flex-end; display: inline-flex; align-items: center; gap: 6px; font-family: Poppins, sans-serif; font-size: 14px; font-weight: 500; text-decoration: underline; text-underline-offset: 4px;">View full size <span style="font-size: 15px; text-decoration: none;">⤢</span></span>
+          </button>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top: 1px solid #efe6e0; background: #fffdfb;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(52px, 7vw, 88px) 28px;">
+      <h2 style="margin: 0 0 clamp(24px, 3vw, 36px); font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(26px, 3vw, 36px); letter-spacing: -0.02em; color: #c2551d;">Activity history</h2>
+      <div style="font-size: 17.168px; line-height: 1.6; color: #4a5a60; max-width: 64ch; text-wrap: pretty; margin-bottom: clamp(24px, 3vw, 36px);">The service order table displays status changes, allowing agents to track when an order is sent, accepted, canceled, rejected and other status types. Initially, canceled orders were placed below the original, but this added development complexity. Instead, I designed a modal for status history, repurposing an existing component from another team, improving usability while reducing table clutter.</div>
+      <div style="display: flex; flex-wrap: wrap; align-items: stretch; gap: 16px;">
+        <figure style="margin: 0; flex: 1 1 320px; display: flex; flex-direction: column; gap: 12px;">
+          <figcaption style="display: flex; align-items: center; gap: 10px;">
+            <span style="padding: 4px 10px; border-radius: 999px; background: #e7e2de; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.06em; color: #3d4a4f;">V1</span>
+            <span style="font-size: 15px; font-weight: 500;">Status changes shown in the table</span>
+          </figcaption>
+          <button type="button" sc-camel-on-click="{{ openActivity1 }}" aria-label="View V1 full size" style="flex: 1; width: 100%; display: flex; flex-direction: column; gap: 10px; padding: 0; border: 0; background: none; cursor: zoom-in; font: inherit; color: #17262b; text-align: left;" style-hover="color: #c2551d;">
+            <span style="display: flex; align-items: center; justify-content: center; width: 100%; aspect-ratio: 4 / 5; background: #f3efec; border: 1px solid #ecd9cf; padding: 16px;">
+              <img src="assets/e1d37303-eeb8-48e9-9f94-451b098729c7.png" alt="V1: Supply point service orders page with a cancel confirmation and the service orders table showing sent accepted and cancel sent statuses" style="display: block; max-width: 100%; max-height: 100%;">
+            </span>
+            <span aria-hidden="true" style="align-self: flex-end; display: inline-flex; align-items: center; gap: 6px; font-family: Poppins, sans-serif; font-size: 14px; font-weight: 500; text-decoration: underline; text-underline-offset: 4px;">View full size <span style="font-size: 15px; text-decoration: none;">⤢</span></span>
+          </button>
+        </figure>
+        <div aria-hidden="true" style="flex: 0 0 auto; align-self: center; width: 44px; height: 44px; border-radius: 999px; background: #c2551d; color: #fffdfb; display: flex; align-items: center; justify-content: center; font-size: 20px;">→</div>
+        <figure style="margin: 0; flex: 1 1 320px; display: flex; flex-direction: column; gap: 12px;">
+          <figcaption style="display: flex; align-items: center; gap: 10px;">
+            <span style="padding: 4px 10px; border-radius: 999px; background: #c2551d; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.06em; color: #fffdfb;">V2</span>
+            <span style="font-size: 15px; font-weight: 500;">Rejection warning with status history modal</span>
+          </figcaption>
+          <button type="button" sc-camel-on-click="{{ openActivity2 }}" aria-label="View V2 full size" style="flex: 1; width: 100%; display: flex; flex-direction: column; gap: 10px; padding: 0; border: 0; background: none; cursor: zoom-in; font: inherit; color: #17262b; text-align: left;" style-hover="color: #c2551d;">
+            <span style="display: flex; align-items: center; justify-content: center; width: 100%; aspect-ratio: 4 / 5; background: #f3efec; border: 1px solid #ecd9cf; padding: 16px;">
+              <img src="assets/4111dbdc-1a6d-496e-b8b2-a78a53f17470.jpg" alt="V2: Supply point service orders page with a rejection-risk warning and a Status history modal listing sent and cancel sent statuses" style="display: block; max-width: 100%; max-height: 100%;">
+            </span>
+            <span aria-hidden="true" style="align-self: flex-end; display: inline-flex; align-items: center; gap: 6px; font-family: Poppins, sans-serif; font-size: 14px; font-weight: 500; text-decoration: underline; text-underline-offset: 4px;">View full size <span style="font-size: 15px; text-decoration: none;">⤢</span></span>
+          </button>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top: 1px solid #efe6e0; background: #F2E4D3;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(52px, 7vw, 88px) 28px;">
+      <h2 style="margin: 0 0 clamp(24px, 3vw, 36px); font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(26px, 3vw, 36px); letter-spacing: -0.02em; color: #23813B;">User testing</h2>
+      <p style="margin: 0 0 clamp(24px, 3vw, 36px); font-size: 17.168px; line-height: 1.6; color: #4a5a60; max-width: 64ch; text-wrap: pretty;">I conducted interviews and usability tests with five agents, and learned that they rated their current system between 7 and 4 out of 10. I provided a clickable prototype and assigned tasks to raise a service order.</p>
+      <blockquote style="margin: 0 0 clamp(28px, 4vw, 44px); padding: 4px 0 4px clamp(18px, 2.5vw, 28px); border-left: 4px solid #c2551d; max-width: 40ch; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(22px, 2.6vw, 30px); line-height: 1.3; letter-spacing: -0.01em; color: #23813B; text-wrap: balance;">“I rated their current system between 7 and 4 out of 10”</blockquote>
+      <p style="margin: 0 0 18px; font-size: 17.168px; line-height: 1.6; color: #4a5a60; max-width: 64ch; text-wrap: pretty;">The agents were pleased with the ‘Cancellation Pending’ message, their current system does not notify agents if a cancellation is pending, it is a known problem where agents raise another service order which then gets rejected because the ‘cancellation’ has not been accepted.</p>
+      <p style="margin: 0 0 18px; font-size: 17.168px; line-height: 1.6; color: #4a5a60; max-width: 64ch; text-wrap: pretty;">Another common problem is agent’s send multiple cancellations because there is no system feedback, they think the cancellation was not sent so they send another. I hid the cancel button once a cancellation is sent to prevent this error.</p>
+      <p style="margin: 0 0 clamp(28px, 4vw, 44px); font-size: 17.168px; line-height: 1.6; color: #4a5a60; max-width: 64ch; text-wrap: pretty;">The agents completed all tasks and gave it a rating of 9 out of 10, one agent quoted, “what would have taken me 2-3 minutes has now taken me 30-40 seconds”.</p>
+      <blockquote style="margin: 0 0 clamp(28px, 4vw, 44px); padding: 4px 0 4px clamp(18px, 2.5vw, 28px); border-left: 4px solid #c2551d; max-width: 40ch; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(22px, 2.6vw, 30px); line-height: 1.3; letter-spacing: -0.01em; color: #23813B; text-wrap: balance;">“What would have taken me 2-3 minutes has now taken me 30-40 seconds.”</blockquote>
+      <figure style="margin: 0; display: flex; flex-direction: column; gap: 10px;">
+        <button type="button" sc-camel-on-click="{{ openTesting }}" aria-label="View user testing session full size" style="display: flex; flex-direction: column; gap: 10px; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; font: inherit; color: #17262b; text-align: left;" style-hover="color: #c2551d;">
+          <span style="display: block; width: 100%; border: 1px solid #ecd9cf; background: #f3efec;">
+            <img src="assets/4162945c-d4e6-45ec-bf8f-aa6cbca0f9ca.png" alt="Remote usability test: the create service order prototype shared on screen, with Christine and agents on the video call" style="display: block; width: 100%; height: auto;">
+          </span>
+          <span aria-hidden="true" style="align-self: flex-end; display: inline-flex; align-items: center; gap: 6px; font-family: Poppins, sans-serif; font-size: 14px; font-weight: 500; text-decoration: underline; text-underline-offset: 4px;">View full size <span style="font-size: 15px; text-decoration: none;">⤢</span></span>
+        </button>
+        <figcaption style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.04em; color: #5b6a70;">Remote usability testing with agents, using a clickable prototype of the create service order journey.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section style="border-top: 1px solid #efe6e0; background: #fffdfb;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(52px, 7vw, 88px) 28px;">
+      <h2 style="margin: 0 0 clamp(24px, 3vw, 36px); font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(26px, 3vw, 36px); letter-spacing: -0.02em; color: #c2551d;">Iteration</h2>
+      <p style="margin: 0; font-size: 17.168px; line-height: 1.6; color: #4a5a60; max-width: 64ch; text-wrap: pretty;">When tasked with raising a ‘de-energisation’ service order, agents missed the message ‘De-energisation unavailable on accounts with life support’, with one mistaking it for a technical issue. As a result they would have to revert to the old system to complete the task. I placed the copy in a notification and had the ‘de-energisation’ pre-selected improve visibility.</p>
+      <div style="display: flex; flex-wrap: wrap; align-items: stretch; gap: 16px; margin-top: clamp(24px, 3vw, 36px);">
+        <figure style="margin: 0; flex: 1 1 320px; display: flex; flex-direction: column; gap: 12px;">
+          <figcaption style="display: flex; align-items: center; gap: 10px;">
+            <span style="padding: 4px 10px; border-radius: 999px; background: #e7e2de; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.06em; color: #3d4a4f;">V1</span>
+            <span style="font-size: 15px; font-weight: 500;">Life support message as hint text</span>
+          </figcaption>
+          <button type="button" sc-camel-on-click="{{ openIteration1 }}" aria-label="View V1 full size" style="flex: 1; width: 100%; display: flex; flex-direction: column; gap: 10px; padding: 0; border: 0; background: none; cursor: zoom-in; font: inherit; color: #17262b; text-align: left;" style-hover="color: #c2551d;">
+            <span style="display: flex; align-items: center; justify-content: center; width: 100%; aspect-ratio: 4 / 5; background: #f3efec; border: 1px solid #ecd9cf; padding: 16px;">
+              <img src="assets/7ac10abd-7475-43a0-a043-f69ba39b5396.png" alt="V1: Create service order form with 'De-energisation unavailable on accounts with life support' as small hint text under the service order type field" style="display: block; max-width: 100%; max-height: 100%;">
+            </span>
+            <span aria-hidden="true" style="align-self: flex-end; display: inline-flex; align-items: center; gap: 6px; font-family: Poppins, sans-serif; font-size: 14px; font-weight: 500; text-decoration: underline; text-underline-offset: 4px;">View full size <span style="font-size: 15px; text-decoration: none;">⤢</span></span>
+          </button>
+        </figure>
+        <div aria-hidden="true" style="flex: 0 0 auto; align-self: center; width: 44px; height: 44px; border-radius: 999px; background: #c2551d; color: #fffdfb; display: flex; align-items: center; justify-content: center; font-size: 20px;">→</div>
+        <figure style="margin: 0; flex: 1 1 320px; display: flex; flex-direction: column; gap: 12px;">
+          <figcaption style="display: flex; align-items: center; gap: 10px;">
+            <span style="padding: 4px 10px; border-radius: 999px; background: #c2551d; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.06em; color: #fffdfb;">V2</span>
+            <span style="font-size: 15px; font-weight: 500;">Life support message in a notification</span>
+          </figcaption>
+          <button type="button" sc-camel-on-click="{{ openIteration2 }}" aria-label="View V2 full size" style="flex: 1; width: 100%; display: flex; flex-direction: column; gap: 10px; padding: 0; border: 0; background: none; cursor: zoom-in; font: inherit; color: #17262b; text-align: left;" style-hover="color: #c2551d;">
+            <span style="display: flex; align-items: center; justify-content: center; width: 100%; aspect-ratio: 4 / 5; background: #f3efec; border: 1px solid #ecd9cf; padding: 16px;">
+              <img src="assets/376c6b2d-187f-4bd8-90e8-1ca703ee06ea.png" alt="V2: Create service order form with the life support message in an information notification at the top and the service order type pre-selected" style="display: block; max-width: 100%; max-height: 100%;">
+            </span>
+            <span aria-hidden="true" style="align-self: flex-end; display: inline-flex; align-items: center; gap: 6px; font-family: Poppins, sans-serif; font-size: 14px; font-weight: 500; text-decoration: underline; text-underline-offset: 4px;">View full size <span style="font-size: 15px; text-decoration: none;">⤢</span></span>
+          </button>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top: 1px solid #efe6e0; background: #F8EAF6;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(52px, 7vw, 88px) 28px;">
+      <h2 style="margin: 0 0 clamp(24px, 3vw, 36px); font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(26px, 3vw, 36px); letter-spacing: -0.02em; color: #23813B;">Prototype</h2>
+      <figure style="margin: 0; display: flex; flex-direction: column; gap: 10px;">
+        <div style="border: 1px solid #ecd9cf; background: #f3efec;">
+          <video src="assets/2f8b1f99-7852-4abe-ad71-05bfb413c147.mp4" poster="assets/d7e1b281-1298-4ac1-8266-e7ba592ec549.jpg" controls="{{ true }}" sc-camel-plays-inline="{{ true }}" preload="auto" aria-label="Screen recording of the service orders prototype" style="display: block; width: 100%; height: auto; aspect-ratio: 1920 / 1018; background: #f3efec;"></video>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <section style="border-top: 1px solid #efe6e0; background: #fffdfb;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(52px, 7vw, 96px) 28px; display: flex; flex-wrap: wrap; gap: clamp(28px, 5vw, 72px);">
+      <div style="flex: 0 1 220px;">
+        <h2 style="margin: 0; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(26px, 3vw, 36px); letter-spacing: -0.02em; color: #c2551d; line-height: 1.08;">Outcome</h2>
+      </div>
+      <div style="flex: 1 1 440px; min-width: 0;">
+        <p style="margin: 0; font-size: 17.168px; line-height: 1.6; color: #4a5a60; max-width: 64ch; text-wrap: pretty;">This project was designed and released before we trained customer agents on this feature. I had left before I could gather enough data on the outcome.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top: 1px solid #efe6e0; background: #fdf9f6;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(40px, 5vw, 64px) 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px;">
+      <div>
+        <div style="font-family: 'Poetsen One', Poppins, sans-serif; font-size: 22px; letter-spacing: -0.01em; color: #23813B; margin-bottom: 8px;">Next project</div>
+        <a href="legacy-contracts.html" style="font-family: 'Poetsen One', Poppins, sans-serif; font-size: clamp(22px, 2.6vw, 32px); letter-spacing: -0.02em; color: #17262b;" style-hover="color: #c2551d;">Deprecating a legacy contracts page →</a>
+      </div>
+      <a href="index.html#work" style="display: inline-flex; align-items: center; padding: 14px 24px; border-radius: 999px; border: 1px solid #d8cac1; color: #17262b; font-size: 15px; font-weight: 500;" style-hover="border-color: #17262b; color: #17262b;">All work</a>
+    </div>
+  </section>
+
+  <section id="contact" style="background: #fffdfb; border-top: 1px solid #efe6e0;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(52px, 7vw, 100px) 28px; display: flex; flex-wrap: wrap; gap: clamp(28px, 5vw, 72px);">
+      <h2 style="margin: 0; flex: 0 1 220px; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(26px, 3vw, 38px); letter-spacing: -0.02em; color: #c2551d; line-height: 1.08;">Let’s work together</h2>
+      <div style="flex: 1 1 440px; min-width: 0;">
+        <p style="margin: 0 0 clamp(20px, 3vw, 30px); font-size: clamp(17px, 1.6vw, 20px); line-height: 1.6; color: #4a5a60; max-width: 48ch; text-wrap: pretty;">Want the full walkthrough of this project? I’m happy to talk through the detail.</p>
+        <a href="mailto:christineanhhoang@gmail.com" style="display: inline-block; font-size: clamp(22px, 4vw, 48px); font-weight: 600; letter-spacing: -0.035em; color: #17262b; border-bottom: 2px solid #f0ddd3; padding-bottom: 6px; word-break: break-word;" style-hover="border-bottom-color: #c2551d; color: #c2551d;">christineanhhoang@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background: #c2551d; color: #fffdfb;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(36px, 5vw, 56px) 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px;">
+      <div style="font-size: 15px; font-weight: 500;">Christine Anh Hoang — Product Designer</div>
+      <nav style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 15px;">
+        <a href="index.html" style="color: #fffdfb;">Home</a>
+        <a href="about.html" style="color: #fffdfb;">About</a>
+        <a href="index.html#work" style="color: #fffdfb;">Work</a>
+        <a href="#contact" style="color: #fffdfb;">Contact</a>
+      </nav>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #fff4ec;">© 2026 · London</div>
+    </div>
+  </footer>
+
+  <sc-if value="{{ zoomOpen }}" hint-placeholder-val="{{ false }}">
+    <div role="dialog" aria-modal="true" aria-label="Full size image" style="position: fixed; inset: 0; z-index: 1000; background: rgba(150, 145, 142, 0.6); display: flex; flex-direction: column;">
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 20px; color: #17262b; border-bottom: 1px solid #e3d9d2; background: rgba(255, 253, 251, 0.94); font-family: Poppins, sans-serif; font-size: 14px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #4a5a60;">{{ zoomHint }}</span>
+        <div style="display: flex; gap: 10px;">
+          <button sc-camel-on-click="{{ closeZoom }}" aria-label="Close" style="padding: 10px 18px; border-radius: 999px; border: 0; background: #c2551d; color: #fffdfb; font-family: Poppins, sans-serif; font-size: 14px; font-weight: 500; cursor: pointer;">Close ✕</button>
+        </div>
+      </div>
+      <div ref="{{ scrollRef }}" style="flex: 1; overflow: auto; display: flex; padding: 20px;">
+        <img ref="{{ imgRef }}" alt="{{ zoomAlt }}" sc-camel-on-click="{{ toggleScale }}" style="{{ imgStyle }}">
+      </div>
+    </div>
+  </sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="">
+class Component extends DCLogic {
+  state = { open: false, actual: false, src: '' };
+  scrollRef = React.createRef();
+  imgRef = React.createRef();
+  zSteps = [1, 1.5, 2, 3, 4, 6, 8];
+  makeZ(k) {
+    const ref = React.createRef();
+    const st = () => this.state[k + 'z'] || 1;
+    const zoomTo = (z, fx = 0.5, fy = 0.5) => {
+      const el = ref.current;
+      z = Math.min(8, Math.max(1, z));
+      if (!el) { this.setState({ [k + 'z']: z }); return; }
+      const px = (el.scrollLeft + fx * el.clientWidth) / el.scrollWidth;
+      const py = (el.scrollTop + fy * el.clientHeight) / el.scrollHeight;
+      this.setState({ [k + 'z']: z }, () => {
+        el.scrollLeft = px * el.scrollWidth - fx * el.clientWidth;
+        el.scrollTop = py * el.scrollHeight - fy * el.clientHeight;
+      });
+    };
+    const next = (z) => this.zSteps.find(s => s > z + 0.01) || 8;
+    const h = {
+      ref,
+      attach: () => {
+        const el = ref.current;
+        if (!el || el === h._el) return;
+        if (h._el && h._wheel) h._el.removeEventListener('wheel', h._wheel);
+        h._el = el;
+        h._wheel = (e) => {
+          if (!e.ctrlKey && !e.metaKey) return;
+          e.preventDefault();
+          const r = el.getBoundingClientRect();
+          zoomTo(st() * Math.exp(-e.deltaY * 0.01), (e.clientX - r.left) / r.width, (e.clientY - r.top) / r.height);
+        };
+        el.addEventListener('wheel', h._wheel, { passive: false });
+      },
+      zin: () => zoomTo(next(st())),
+      zout: () => zoomTo([...this.zSteps].reverse().find(s => s < st() - 0.01) || 1),
+      fit: () => zoomTo(1),
+      dbl: (e) => {
+        const el = ref.current; if (!el) return;
+        const r = el.getBoundingClientRect();
+        const z = st();
+        zoomTo(z >= 8 ? 1 : next(z), (e.clientX - r.left) / r.width, (e.clientY - r.top) / r.height);
+      },
+      down: (e) => {
+        if (st() <= 1 || e.button !== 0) return;
+        const el = ref.current; if (!el) return;
+        h._drag = { x: e.clientX, y: e.clientY, l: el.scrollLeft, t: el.scrollTop };
+        try { el.setPointerCapture(e.pointerId); } catch (_) {}
+        this.setState({ [k + 'Drag']: true });
+      },
+      move: (e) => {
+        const d = h._drag, el = ref.current; if (!d || !el) return;
+        el.scrollLeft = d.l - (e.clientX - d.x);
+        el.scrollTop = d.t - (e.clientY - d.y);
+      },
+      up: () => { if (h._drag) { h._drag = null; this.setState({ [k + 'Drag']: false }); } },
+    };
+    return h;
+  }
+  zj = this.makeZ('j');
+  zm = this.makeZ('m');
+  jAttach() { this.zj.attach(); this.zm.attach(); }
+  zVals(k, h, ratio) {
+    const z = this.state[k + 'z'] || 1;
+    return {
+      [k + 'Ref']: h.ref, [k + 'In']: h.zin, [k + 'Out']: h.zout, [k + 'Fit']: h.fit, [k + 'Double']: h.dbl,
+      [k + 'Down']: h.down, [k + 'Move']: h.move, [k + 'Up']: h.up,
+      [k + 'Label']: Math.round(z * 100) + '%',
+      [k + 'BoxStyle']: { position: 'relative', overflow: z > 1 ? 'auto' : 'hidden', aspectRatio: ratio, touchAction: z > 1 ? 'none' : 'pan-y', cursor: z > 1 ? (this.state[k + 'Drag'] ? 'grabbing' : 'grab') : 'zoom-in', userSelect: 'none' },
+      [k + 'ImgStyle']: { display: 'block', width: (z * 100) + '%', maxWidth: 'none', height: 'auto' },
+    };
+  }
+  componentDidUpdate() { this.jAttach(); const i = this.imgRef.current; if (i && this.state.src && i.getAttribute('src') !== this.state.src) i.setAttribute('src', this.state.src); }
+  componentDidMount() {
+    this.jAttach(); requestAnimationFrame(() => this.jAttach());
+    this._key = (e) => { if (e.key === 'Escape' && this.state.open) this.close(); };
+    window.addEventListener('keydown', this._key);
+  }
+  componentWillUnmount() { window.removeEventListener('keydown', this._key); document.body.style.overflow = ''; }
+  open = () => {
+    const slot = document.getElementById('so-journey');
+    const img = slot && slot.shadowRoot && slot.shadowRoot.querySelector('img[part="image"]');
+    const src = img && img.getAttribute('src');
+    if (!src) return;
+    document.body.style.overflow = 'hidden';
+    this.setState({ open: true, actual: false, src });
+  };
+  openJourney = () => {
+    const src = new URL('./assets/e573130b-d9b1-41b8-9e43-64457da8b37d.png', document.baseURI).href;
+    document.body.style.overflow = 'hidden';
+    this.setState({ open: true, actual: false, src });
+  };
+  openImg = (file, alt, zoomW) => {
+    const src = new URL(file, document.baseURI).href;
+    document.body.style.overflow = 'hidden';
+    this.setState({ open: true, actual: false, src, alt, zoomW: zoomW || null });
+  };
+  openStart1 = () => this.openImg('./assets/57c6e511-1527-4e5a-bbf2-288f5dc1fccd.png', 'V1: Create service orders page with meter point, address and name search', '800px');
+  openStart2 = () => this.openImg('./assets/d269f697-d67a-4dde-a1a4-5d53fba844e4.png', 'V2: Customer account home with Service orders added to the side navigation', '800px');
+  openIteration1 = () => this.openImg('./assets/7ac10abd-7475-43a0-a043-f69ba39b5396.png', 'V1: Life support message as hint text', '800px');
+  openIteration2 = () => this.openImg('./assets/376c6b2d-187f-4bd8-90e8-1ca703ee06ea.png', 'V2: Life support message in a notification', '800px');
+  openTesting = () => this.openImg('./assets/4162945c-d4e6-45ec-bf8f-aa6cbca0f9ca.png', 'Remote usability test with agents using the create service order prototype', '2900px');
+  openActivity1 = () => this.openImg('./assets/e1d37303-eeb8-48e9-9f94-451b098729c7.png', 'V1: Service orders table showing status changes', '800px');
+  openActivity2 = () => this.openImg('./assets/4111dbdc-1a6d-496e-b8b2-a78a53f17470.jpg', 'V2: Rejection-risk warning with the Status history modal', '800px');
+  close = () => { document.body.style.overflow = ''; this.setState({ open: false }); };
+  toggle = (e) => {
+    const el = this.scrollRef.current;
+    const img = e && e.currentTarget && e.currentTarget.tagName === 'IMG' ? e.currentTarget : null;
+    let fx = 0.5, fy = 0.5, zoomPx = null;
+    if (img && !this.state.actual) {
+      const r = img.getBoundingClientRect();
+      fx = (e.clientX - r.left) / r.width; fy = (e.clientY - r.top) / r.height;
+      const nw = img.naturalWidth, nh = img.naturalHeight;
+      if (nw && nh) zoomPx = Math.round(Math.min(r.width, r.height * nw / nh) * 1.4) + 'px';
+    }
+    this.setState(s => ({ actual: !s.actual, zoomPx }), () => {
+      if (!el || !this.state.actual) return;
+      requestAnimationFrame(() => {
+        el.scrollLeft = fx * el.scrollWidth - el.clientWidth / 2;
+        el.scrollTop = fy * el.scrollHeight - el.clientHeight / 2;
+      });
+    });
+  };
+  renderVals() {
+    const a = this.state.actual;
+    return {
+      zoomOpen: this.state.open,
+      imgRef: this.imgRef,
+      openZoom: this.open,
+      openJourney: this.openJourney,
+      openStart1: this.openStart1, openStart2: this.openStart2,
+      openActivity1: this.openActivity1, openActivity2: this.openActivity2,
+      openTesting: this.openTesting,
+      openIteration1: this.openIteration1, openIteration2: this.openIteration2,
+      zoomAlt: this.state.alt || 'Service orders board',
+      ...this.zVals('j', this.zj, '8122 / 3072'),
+      ...this.zVals('m', this.zm, '7681 / 2935'),
+      closeZoom: this.close,
+      toggleScale: this.toggle,
+      scrollRef: this.scrollRef,
+      scaleLabel: a ? 'Fit to screen' : 'Actual size',
+      zoomHint: a ? 'Scroll to pan · click to fit' : 'Click the board to zoom in · Esc to close',
+      imgStyle: this.state.zoomW
+        ? (a
+          ? { display: 'block', margin: 0, width: this.state.zoomPx || this.state.zoomW, height: 'auto', maxWidth: 'none', maxHeight: 'none', flex: '0 0 auto', alignSelf: 'flex-start', cursor: 'zoom-out' }
+          : { display: 'block', margin: 'auto', width: '100%', height: '100%', minWidth: 0, minHeight: 0, objectFit: 'contain', cursor: 'zoom-in' })
+        : a
+        ? { display: 'block', margin: 0, maxWidth: 'none', maxHeight: 'none', flex: '0 0 auto', alignSelf: 'flex-start', cursor: 'zoom-out', boxShadow: '0 20px 50px -20px rgba(23, 38, 43, 0.45)' }
+        : { display: 'block', margin: 'auto', maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', cursor: 'zoom-in', boxShadow: '0 20px 50px -20px rgba(23, 38, 43, 0.45)' },
+    };
+  }
+}
+</script>
+
+
+</body></html>
