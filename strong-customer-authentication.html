@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Poetsen+One&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<script src="./image-slot.js"></script>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #fffdfb; -webkit-font-smoothing: antialiased; }
+  a { color: #A9481A; text-decoration: none; }
+  a:hover { color: #23813B; }
+  ::selection { background: #F9D3EF; }
+  /* Brand colours: primary #D96827, primary text #A9481A, secondary #23813B, accent #E443B7, neutral #DFD0BD */
+  [style*="color: #c2551d"], [style*="color: rgb(194, 85, 29)"] { color: #A9481A !important; }
+  h1[style*="color: #c2551d"], h1[style*="color: rgb(194, 85, 29)"], h2[style*="color: #c2551d"], h2[style*="color: rgb(194, 85, 29)"] { color: #D96827 !important; }
+  footer[style*="background: #c2551d"], footer[style*="background: rgb(194, 85, 29)"] { background: #A9481A !important; }
+  div[aria-hidden="true"][style*="background: #c2551d"], div[aria-hidden="true"][style*="background: rgb(194, 85, 29)"] { background: #D96827 !important; }
+  span[style*="background: #c2551d"], span[style*="background: rgb(194, 85, 29)"], button[style*="background: #c2551d"], button[style*="background: rgb(194, 85, 29)"] { background: #23813B !important; }
+  [style*="background: #fdf3ef"], [style*="background: rgb(253, 243, 239)"] { background: #F5EEE6 !important; }
+  [style*="background: #fdf9f6"], [style*="background: rgb(253, 249, 246)"] { background: #FAF6F1 !important; }
+  [style*="background: #f3efec"], [style*="background: rgb(243, 239, 236)"], [style*="background: #e8eee6"], [style*="background: rgb(232, 238, 230)"] { background: #F2EBE2 !important; }
+  [style*="#efe6e0"], [style*="rgb(239, 230, 224)"], [style*="#e9ded7"], [style*="rgb(233, 222, 215)"], [style*="#f0e8e3"], [style*="rgb(240, 232, 227)"] { border-color: #E8DDD0 !important; }
+  [style*="#ecd9cf"], [style*="rgb(236, 217, 207)"], [style*="#f0ddd3"], [style*="rgb(240, 221, 211)"] { border-color: #DFD0BD !important; }
+  blockquote { border-left-color: #E443B7 !important; }
+  [style*="color: #4a5a60"], [style*="color: rgb(74, 90, 96)"] { color: #2E3B40 !important; }
+  [style*="color: #5b6a70"], [style*="color: rgb(91, 106, 112)"] { color: #34434A !important; }
+  [style*="color: #5f6f74"], [style*="color: rgb(95, 111, 116)"] { color: #3A494F !important; }
+  figcaption { font-family: Poppins, system-ui, sans-serif !important; font-weight: 700 !important; letter-spacing: 0 !important; }
+  figcaption > span:not([style*="999px"]) { font-weight: 700 !important; }
+  a[style*="border-radius: 999px"][style*="#d8cac1"], a[style*="border-radius: 999px"][style*="rgb(216, 202, 193)"], a[href="#contact"][style*="border-radius: 999px"] { background: #E443B7 !important; color: #000000 !important; border-color: #E443B7 !important; }
+  a[style*="border-radius: 999px"][style*="#d8cac1"]:hover, a[style*="border-radius: 999px"][style*="rgb(216, 202, 193)"]:hover, a[href="#contact"][style*="border-radius: 999px"]:hover { background: #EE7DCF !important; border-color: #EE7DCF !important; color: #000000 !important; }
+  html { scroll-behavior: smooth; }
+  .rv { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1); transition-delay: var(--rv-d, 0ms); }
+  .rv.rv-in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .rv { opacity: 1; transform: none; transition: none; } }
+  .nav-dd .nav-dd-menu { display: none; }
+  .nav-dd:hover .nav-dd-menu, .nav-dd:focus-within .nav-dd-menu { display: block; }
+</style>
+</helmet>
+<div style="font-family: Poppins, system-ui, sans-serif; color: #17262b; background: #fffdfb; overflow-x: hidden;">
+
+  <header style="position: sticky; top: 0; z-index: 50; background: rgba(255,253,251,0.88); backdrop-filter: blur(12px); border-bottom: 1px solid #efe6e0;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 16px 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;">
+      <a href="index.html" style="font-size: 15px; font-weight: 600; letter-spacing: -0.01em; color: #17262b;">Christine Anh Hoang</a>
+      <nav style="display: flex; align-items: center; gap: clamp(16px, 3vw, 40px); font-size: 15px; font-weight: 500;">
+        <a href="index.html" style="color: #17262b;">Home</a>
+        <a href="about.html" style="color: #17262b;">About</a>
+        <div class="nav-dd" style="position: relative; display: inline-flex;">
+        <a href="index.html#work" style="display: inline-flex; align-items: center; gap: 6px; color: #c2551d;">Work<span style="font-size: 9px; line-height: 1;">&#9662;</span></a>
+        <div class="nav-dd-menu" style="position: absolute; top: 100%; left: 50%; transform: translateX(-50%); padding-top: 14px; min-width: 288px; z-index: 60;">
+          <div style="background: #fffdfb; border: 1px solid #e9ded7; box-shadow: 0 14px 36px rgba(23,38,43,0.12); padding: 6px; display: flex; flex-direction: column;">
+        <a href="service-orders.html" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 14px; color: #17262b; font-size: 14px; font-weight: 500; line-height: 1.35;" style-hover="background: #fdf3ef; color: #c2551d;">
+          <span>Service orders</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Kaluza × AGL</span>
+        </a>
+        <a href="legacy-contracts.html" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 14px; color: #17262b; font-size: 14px; font-weight: 500; line-height: 1.35;" style-hover="background: #fdf3ef; color: #c2551d;">
+          <span>Deprecating a legacy contracts page</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Kaluza × OVO</span>
+        </a>
+        <a href="platform-adoption.html" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 14px; color: #17262b; font-size: 14px; font-weight: 500; line-height: 1.35;" style-hover="background: #fdf3ef; color: #c2551d;">
+          <span>Pushing adoption of the full feature suite</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Kaluza</span>
+        </a>
+        <a href="funding-structure.html" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 14px; color: #17262b; font-size: 14px; font-weight: 500; line-height: 1.35;" style-hover="background: #fdf3ef; color: #c2551d;">
+          <span>A streamlined funding structure</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Soldo</span>
+        </a>
+        <a href="strong-customer-authentication.html" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 14px; color: #17262b; font-size: 14px; font-weight: 500; line-height: 1.35;" style-hover="background: #fdf3ef; color: #c2551d;">
+          <span>Strong Customer Authentication</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Soldo</span>
+        </a>
+            <a href="index.html#work" style="padding: 10px 14px; margin-top: 4px; border-top: 1px solid #f0e8e3; color: #c2551d; font-size: 13px; font-weight: 500;" style-hover="background: #fdf3ef; color: #c2551d;">All work &rarr;</a>
+          </div>
+        </div>
+      </div>
+        <a href="#contact" style="display: inline-flex; align-items: center; padding: 9px 18px; border-radius: 999px; background: #17262b; color: #fffdfb; font-weight: 500;" style-hover="background: #c2551d; color: #fffdfb;">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section style="max-width: 1240px; margin: 0 auto; padding: clamp(40px, 6vw, 80px) 28px clamp(28px, 4vw, 48px);">
+    <a href="index.html#work" style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.04em; color: #5f6f74;" style-hover="color: #c2551d;">&larr; All work</a>
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin: 26px 0 20px;">
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: #8a5236; background: #fdf3ef; border: 1px solid #f0ddd3; padding: 6px 12px; border-radius: 999px;">Soldo</span>
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: #4a5a60; background: #f3f1ee; border: 1px solid #e7e3de; padding: 6px 12px; border-radius: 999px;">Regulated security</span>
+    </div>
+    <h1 style="margin: 0; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(40px, 7vw, 86px); line-height: 1.02; letter-spacing: -0.02em; text-wrap: balance;">Strong Customer Authentication</h1>
+  </section>
+
+  <section style="max-width: 1240px; margin: 0 auto; padding: 0 28px clamp(40px, 5vw, 64px);">
+    <div style="position: relative; width: 100%; aspect-ratio: 16 / 8; background: #191919;">
+      <img src="./sca-hero-v4.jpg" alt="Soldo mobile app verification screen on a laptop next to the Soldo mobile app on a phone" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;" />
+    </div>
+  </section>
+
+  <section style="border-top: 1px solid #efe6e0; background: #fffdfb;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(40px, 5vw, 64px) 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); gap: clamp(20px, 3vw, 40px);">
+      <div>
+        <div style="font-family: 'Poetsen One', Poppins, sans-serif; font-size: 22px; letter-spacing: -0.01em; color: #23813B; margin-bottom: 8px;">Role</div>
+        <div style="font-size: 16px; line-height: 1.55; color: #17262b;">UX designer</div>
+        <p style="margin: 10px 0 0; font-size: 15px; line-height: 1.6; color: #4a5a60; text-wrap: pretty;">I worked with a UI designer who had already designed the journey. I provided a new user journey and solutions for handling the unhappy paths.</p>
+      </div>
+      <div>
+        <div style="font-family: 'Poetsen One', Poppins, sans-serif; font-size: 22px; letter-spacing: -0.01em; color: #23813B; margin-bottom: 8px;">Team</div>
+        <div style="font-size: 16px; line-height: 1.55; color: #17262b;">Myself (UX designer), UX researchers, UI designer and product manager</div>
+      </div>
+      <div>
+        <div style="font-family: 'Poetsen One', Poppins, sans-serif; font-size: 22px; letter-spacing: -0.01em; color: #23813B; margin-bottom: 8px;">Sprint</div>
+        <div style="font-size: 16px; line-height: 1.55; color: #17262b;">8 weeks</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top: 1px solid #efe6e0; background: #fffdfb;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(52px, 7vw, 96px) 28px; display: flex; flex-wrap: wrap; gap: clamp(28px, 5vw, 72px);">
+      <div style="flex: 0 1 220px;">
+        <h2 style="margin: 0; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(26px, 3vw, 36px); letter-spacing: -0.02em; color: #c2551d; line-height: 1.08;">What is SCA?</h2>
+      </div>
+      <div style="flex: 1 1 440px; min-width: 0;">
+        <p style="margin: 0; font-size: clamp(18px, 1.8vw, 23px); line-height: 1.55; color: #17262b; max-width: 46ch; text-wrap: pretty;">Strong Customer Authentication (SCA) are rules set in the Payment Services Regulations which have taken effect from 14th September 2019.</p>
+        <p style="margin: 18px 0 0; font-size: 16px; line-height: 1.66; color: #5b6a70; max-width: 64ch; text-wrap: pretty;">Banks and payment services providers must implement a method for users to validate they are authorised to make payments or access their payment account.</p>
+        <h3 style="margin: clamp(28px, 3.5vw, 40px) 0 0; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(19px, 2vw, 24px); letter-spacing: -0.01em; color: #23813B;">The rules are required to take place when the payer</h3>
+        <div style="display: flex; flex-direction: column; margin-top: clamp(20px, 2.6vw, 28px);">
+          <div style="display: flex; gap: clamp(16px, 2.5vw, 32px); padding: clamp(16px, 2vw, 22px) 0; border-top: 1px solid #E443B7;">
+            <div style="flex: 0 0 36px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 700; color: #E443B7; padding-top: 3px;">01</div>
+            <p style="margin: 0; font-size: 16px; line-height: 1.66; color: #17262b; max-width: 62ch;">Initiates an electronic payment transaction</p>
+          </div>
+          <div style="display: flex; gap: clamp(16px, 2.5vw, 32px); padding: clamp(16px, 2vw, 22px) 0; border-top: 1px solid #E443B7;">
+            <div style="flex: 0 0 36px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 700; color: #E443B7; padding-top: 3px;">02</div>
+            <p style="margin: 0; font-size: 16px; line-height: 1.66; color: #17262b; max-width: 62ch;">Accesses their payment account online</p>
+          </div>
+          <div style="display: flex; gap: clamp(16px, 2.5vw, 32px); padding: clamp(16px, 2vw, 22px) 0; border-top: 1px solid #E443B7; border-bottom: 1px solid #E443B7;">
+            <div style="flex: 0 0 36px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 700; color: #E443B7; padding-top: 3px;">03</div>
+            <p style="margin: 0; font-size: 16px; line-height: 1.66; color: #17262b; max-width: 62ch;">Carries out any action remotely that may imply a risk of payment fraud</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top: 1px solid #efe6e0; background: #fffdfb;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(52px, 7vw, 96px) 28px; display: flex; flex-wrap: wrap; gap: clamp(28px, 5vw, 72px);">
+      <div style="flex: 0 1 220px;">
+        <h2 style="margin: 0; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(26px, 3vw, 36px); letter-spacing: -0.02em; color: #c2551d; line-height: 1.08;">My process</h2>
+      </div>
+      <div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column;">
+        <p style="margin: 0; font-size: clamp(18px, 1.8vw, 23px); line-height: 1.55; color: #17262b; max-width: 46ch; text-wrap: pretty;">Identify how users are to authenticate themselves.</p>
+        <p style="margin: 18px 0 0; font-size: 16px; line-height: 1.66; color: #5b6a70; max-width: 64ch; text-wrap: pretty;">Users are required to verify themselves on the web console when engaging with payments related information.</p>
+
+        <h3 style="margin: clamp(32px, 4vw, 48px) 0 0; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(19px, 2vw, 24px); letter-spacing: -0.01em; color: #23813B;">They can verify in two ways</h3>
+        <div style="display: flex; flex-direction: column; margin-top: clamp(16px, 2vw, 22px);">
+          <div style="display: flex; gap: clamp(16px, 2.5vw, 32px); padding: clamp(16px, 2vw, 22px) 0; border-top: 1px solid #E443B7;">
+            <div style="flex: 0 0 36px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 700; color: #E443B7; padding-top: 3px;">01</div>
+            <p style="margin: 0; font-size: 16px; line-height: 1.66; color: #17262b; max-width: 62ch;">Open the mobile app if the push notification is present, or enter the approval centre within the app.</p>
+          </div>
+          <div style="display: flex; gap: clamp(16px, 2.5vw, 32px); padding: clamp(16px, 2vw, 22px) 0; border-top: 1px solid #E443B7; border-bottom: 1px solid #E443B7;">
+            <div style="flex: 0 0 36px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 700; color: #E443B7; padding-top: 3px;">02</div>
+            <p style="margin: 0; font-size: 16px; line-height: 1.66; color: #17262b; max-width: 62ch;">Enter a text code sent by SMS.</p>
+          </div>
+        </div>
+
+        <h3 style="margin: clamp(32px, 4vw, 48px) 0 0; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(19px, 2vw, 24px); letter-spacing: -0.01em; color: #23813B;">When users need to verify</h3>
+        <p style="margin: 10px 0 0; font-size: 16px; line-height: 1.66; color: #5b6a70; max-width: 64ch; text-wrap: pretty;">We discovered the user will need to validate their permission to:</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 12px; margin-top: clamp(16px, 2vw, 22px);">
+          <div style="display: flex; gap: 14px; align-items: flex-start; padding: 16px 18px; background: #F8EAF6; border-radius: 12px;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 700; color: #E443B7; padding-top: 2px;">01</span><span style="font-size: 15px; line-height: 1.55; color: #17262b;">Log into Soldo for the first time, then re-authenticate every 90 days</span></div>
+          <div style="display: flex; gap: 14px; align-items: flex-start; padding: 16px 18px; background: #F8EAF6; border-radius: 12px;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 700; color: #E443B7; padding-top: 2px;">02</span><span style="font-size: 15px; line-height: 1.55; color: #17262b;">View card numbers and PINs</span></div>
+          <div style="display: flex; gap: 14px; align-items: flex-start; padding: 16px 18px; background: #F8EAF6; border-radius: 12px;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 700; color: #E443B7; padding-top: 2px;">03</span><span style="font-size: 15px; line-height: 1.55; color: #17262b;">View report transactions older than 90 days</span></div>
+          <div style="display: flex; gap: 14px; align-items: flex-start; padding: 16px 18px; background: #F8EAF6; border-radius: 12px;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 700; color: #E443B7; padding-top: 2px;">04</span><span style="font-size: 15px; line-height: 1.55; color: #17262b;">View report statements older than 90 days</span></div>
+          <div style="display: flex; gap: 14px; align-items: flex-start; padding: 16px 18px; background: #F8EAF6; border-radius: 12px;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 700; color: #E443B7; padding-top: 2px;">05</span><span style="font-size: 15px; line-height: 1.55; color: #17262b;">Export reports</span></div>
+          <div style="display: flex; gap: 14px; align-items: flex-start; padding: 16px 18px; background: #F8EAF6; border-radius: 12px;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 700; color: #E443B7; padding-top: 2px;">06</span><span style="font-size: 15px; line-height: 1.55; color: #17262b;">Order new cards</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top: 1px solid #efe6e0; background: #F8EAF6;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(52px, 7vw, 96px) 28px;">
+      <h2 style="margin: 0; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(26px, 3vw, 36px); letter-spacing: -0.02em; color: #c2551d; line-height: 1.08;">The unhappy paths</h2>
+      <p style="margin: 18px 0 0; font-size: 16px; line-height: 1.66; color: #5b6a70; max-width: 64ch; text-wrap: pretty;">I mapped the end-to-end user journey, tracing every point where users could drop out or get stuck. The unhappy paths are marked in red, and the two numbered points are where I suggested new solutions.</p>
+      <figure style="margin: clamp(24px, 3vw, 36px) 0 0;">
+        <button onClick="{{ openJourney }}" aria-label="View the SCA user journey full size" style="display: block; width: 100%; padding: 0; border: 1px solid #ecd9cf; border-radius: 12px; overflow: hidden; background: #ffffff; cursor: zoom-in;">
+          <img src="./sca-user-journey.png" alt="SCA user journey flowchart from log-in to accessing the platform, with unhappy paths in red" style="display: block; width: 100%; height: auto;" />
+        </button>
+        <figcaption style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 14px; font-size: 14px; color: #17262b;">
+          <span>SCA user journey</span>
+          <button onClick="{{ openJourney }}" style="padding: 8px 16px; border-radius: 999px; border: 1px solid #17262b; background: transparent; color: #17262b; font-family: Poppins, sans-serif; font-size: 13px; font-weight: 500; cursor: pointer;">View full size</button>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section style="border-top: 1px solid #efe6e0; background: #fffdfb;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(52px, 7vw, 96px) 28px; display: flex; flex-wrap: wrap; gap: clamp(28px, 5vw, 72px);">
+      <div style="flex: 0 1 220px;">
+        <h2 style="margin: 0; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(26px, 3vw, 36px); letter-spacing: -0.02em; color: #c2551d; line-height: 1.08;">Having trouble logging in?</h2>
+      </div>
+      <div style="flex: 1 1 440px; min-width: 0;">
+        <p style="margin: 0; font-size: 16px; line-height: 1.66; color: #5b6a70; max-width: 64ch; text-wrap: pretty;">I identified a usability issue where non-admin users experienced a login loop due to unclear guidance around admin-only support. The existing copy implied that only admins could contact customer support, leaving users unsure of their role or how to identify their admin.</p>
+        <p style="margin: 18px 0 0; font-size: 16px; line-height: 1.66; color: #5b6a70; max-width: 64ch; text-wrap: pretty;">I collaborated with customer support to understand common user enquiries, and confirmed that support could help non-admin users identify their admin, provided no restrictions were in place.</p>
+        <h3 style="margin: clamp(28px, 3.5vw, 40px) 0 0; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(19px, 2vw, 24px); letter-spacing: -0.01em; color: #23813B;">Based on these insights, I improved the login experience by</h3>
+        <div style="display: flex; flex-direction: column; margin-top: clamp(20px, 2.6vw, 28px);">
+          <div style="display: flex; gap: clamp(16px, 2.5vw, 32px); padding: clamp(16px, 2vw, 22px) 0; border-top: 1px solid #E443B7;">
+            <div style="flex: 0 0 36px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 700; color: #E443B7; padding-top: 3px;">01</div>
+            <p style="margin: 0; font-size: 16px; line-height: 1.66; color: #17262b; max-width: 62ch;">Updating copy to clearly indicate that support is available to all business users (“Still having trouble? Contact us.”)</p>
+          </div>
+          <div style="display: flex; gap: clamp(16px, 2.5vw, 32px); padding: clamp(16px, 2vw, 22px) 0; border-top: 1px solid #E443B7; border-bottom: 1px solid #E443B7;">
+            <div style="flex: 0 0 36px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 700; color: #E443B7; padding-top: 3px;">02</div>
+            <p style="margin: 0; font-size: 16px; line-height: 1.66; color: #17262b; max-width: 62ch;">Adding a link to the mobile app with a visual guide, to help users download the correct app and complete authentication</p>
+          </div>
+        </div>
+        <p style="margin: clamp(20px, 2.6vw, 28px) 0 0; font-size: 16px; line-height: 1.66; color: #5b6a70; max-width: 64ch; text-wrap: pretty;">These changes reduced confusion, prevented login dead-ends, and helped users resolve access issues more quickly.</p>
+      </div>
+      <figure style="flex: 1 1 100%; margin: 0;">
+        <button onClick="{{ openFinal }}" aria-label="View the Having trouble with logging in? screen full size" style="display: block; width: 100%; padding: 0; border: 1px solid #ecd9cf; border-radius: 12px; overflow: hidden; background: #ffffff; cursor: zoom-in;">
+          <img src="./sca-trouble-final.png" alt="Final design: Having trouble with logging in? screen with checks for app access and mobile number, and a contact us link" style="display: block; width: 100%; height: auto;" />
+        </button>
+        <figcaption style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 14px; font-size: 14px; color: #17262b;">
+          <span>Final design: Having trouble with logging in?</span>
+          <button onClick="{{ openFinal }}" style="padding: 8px 16px; border-radius: 999px; border: 1px solid #17262b; background: transparent; color: #17262b; font-family: Poppins, sans-serif; font-size: 13px; font-weight: 500; cursor: pointer;">View full size</button>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section style="border-top: 1px solid #efe6e0; background: #fffdfb;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(52px, 7vw, 96px) 28px; display: flex; flex-wrap: wrap; gap: clamp(28px, 5vw, 72px);">
+      <div style="flex: 0 1 220px;">
+        <h2 style="margin: 0; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(26px, 3vw, 36px); letter-spacing: -0.02em; color: #c2551d; line-height: 1.08;">Don’t have the app?</h2>
+      </div>
+      <div style="flex: 1 1 440px; min-width: 0;">
+        <p style="margin: 0; font-size: 16px; line-height: 1.66; color: #5b6a70; max-width: 64ch; text-wrap: pretty;">During analysis of the Strong Customer Authentication (SCA) flow, I identified a drop-off point at the SCA pop-up. Users were abandoning the journey because they either didn’t have the mobile app installed, hadn’t fully read the instructions before continuing, or felt uncertain about starting a new process without knowing how long it would take.</p>
+        <p style="margin: 18px 0 0; font-size: 16px; line-height: 1.66; color: #5b6a70; max-width: 64ch; text-wrap: pretty;">This lack of clarity created hesitation and prevented users from completing authentication.</p>
+        <h3 style="margin: clamp(28px, 3.5vw, 40px) 0 0; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(19px, 2vw, 24px); letter-spacing: -0.01em; color: #23813B;">To reduce friction and set clearer expectations, I redesigned the SCA pop-up by</h3>
+        <div style="display: flex; flex-direction: column; margin-top: clamp(20px, 2.6vw, 28px);">
+          <div style="display: flex; gap: clamp(16px, 2.5vw, 32px); padding: clamp(16px, 2vw, 22px) 0; border-top: 1px solid #E443B7;">
+            <div style="flex: 0 0 36px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 700; color: #E443B7; padding-top: 3px;">01</div>
+            <p style="margin: 0; font-size: 16px; line-height: 1.66; color: #17262b; max-width: 62ch;">Adding a prominent link to download the app (“Don’t have our app? Follow this link”) to immediately support users without it</p>
+          </div>
+          <div style="display: flex; gap: clamp(16px, 2.5vw, 32px); padding: clamp(16px, 2vw, 22px) 0; border-top: 1px solid #E443B7; border-bottom: 1px solid #E443B7;">
+            <div style="flex: 0 0 36px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 700; color: #E443B7; padding-top: 3px;">02</div>
+            <p style="margin: 0; font-size: 16px; line-height: 1.66; color: #17262b; max-width: 62ch;">Introducing a progress bar to communicate how many steps were involved and how long the process would take</p>
+          </div>
+        </div>
+      </div>
+      <figure style="flex: 1 1 100%; margin: 0;">
+        <button onClick="{{ openPopupFinal }}" aria-label="View the SCA pop-up design full size" style="display: block; width: 100%; max-width: 760px; margin: 0 auto; padding: 0; border: 1px solid #ecd9cf; border-radius: 12px; overflow: hidden; background: #ffffff; cursor: zoom-in;">
+          <img src="./sca-popup-final.png" alt="SCA pop-up wireframe with a three-step progress bar, animation, a Don't have the app? link and a Continue button" style="display: block; width: 100%; height: auto;" />
+        </button>
+        <figcaption style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; max-width: 760px; margin: 14px auto 0; font-size: 14px; color: #17262b;">
+          <span>SCA pop-up with app link and progress bar</span>
+          <button onClick="{{ openPopupFinal }}" style="padding: 8px 16px; border-radius: 999px; border: 1px solid #17262b; background: transparent; color: #17262b; font-family: Poppins, sans-serif; font-size: 13px; font-weight: 500; cursor: pointer;">View full size</button>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section style="border-top: 1px solid #efe6e0; background: #F2E4D3;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(52px, 7vw, 88px) 28px;">
+      <h2 style="margin: 0; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(26px, 3vw, 36px); letter-spacing: -0.02em; color: #23813B; line-height: 1.08;">Outcome</h2>
+      <p style="margin: 18px 0 clamp(24px, 3vw, 36px); font-size: 17px; line-height: 1.6; color: #4a5a60; max-width: 64ch; text-wrap: pretty;">These changes reduced uncertainty at a critical decision point, helping users feel more confident continuing with SCA and improving completion of the authentication journey.</p>
+      <figure style="margin: 0;">
+        <div style="border: 1px solid #ecd9cf; background: #f3efec; border-radius: 12px; overflow: hidden;">
+          <video src="./sca-outcome.mp4" poster="./sca-outcome-poster.jpg" controls="{{ true }}" playsInline="{{ true }}" preload="auto" aria-label="Screen recording of the SCA log-in and authentication flow" style="display: block; width: 100%; height: auto; aspect-ratio: 1920 / 1196; background: #f3efec;"></video>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <section style="border-top: 1px solid #efe6e0; background: #fdf9f6;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(40px, 5vw, 64px) 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px;">
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #5f6f74; margin-bottom: 10px;">Next project</div>
+        <a href="service-orders.html" style="font-family: 'Poetsen One', Poppins, sans-serif; font-size: clamp(22px, 2.6vw, 32px); letter-spacing: -0.02em; color: #17262b;" style-hover="color: #c2551d;">Service orders &rarr;</a>
+      </div>
+      <a href="index.html#work" style="display: inline-flex; align-items: center; padding: 14px 24px; border-radius: 999px; border: 1px solid #d8cac1; color: #17262b; font-size: 15px; font-weight: 500;" style-hover="border-color: #17262b; color: #17262b;">All work</a>
+    </div>
+  </section>
+
+  <section id="contact" style="background: #fffdfb; border-top: 1px solid #efe6e0;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(52px, 7vw, 100px) 28px; display: flex; flex-wrap: wrap; gap: clamp(28px, 5vw, 72px);">
+      <h2 style="margin: 0; flex: 0 1 220px; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(26px, 3vw, 38px); letter-spacing: -0.02em; color: #c2551d; line-height: 1.08;">Let&rsquo;s work together</h2>
+      <div style="flex: 1 1 440px; min-width: 0;">
+        <p style="margin: 0 0 clamp(20px, 3vw, 30px); font-size: clamp(17px, 1.6vw, 20px); line-height: 1.6; color: #4a5a60; max-width: 48ch; text-wrap: pretty;">Have a project in mind? I&rsquo;d love to connect.</p>
+        <a href="mailto:christineanhhoang@gmail.com" style="display: inline-block; font-size: clamp(22px, 4vw, 48px); font-weight: 600; letter-spacing: -0.035em; color: #17262b; border-bottom: 2px solid #f0ddd3; padding-bottom: 6px; word-break: break-word;" style-hover="border-bottom-color: #c2551d; color: #c2551d;">christineanhhoang@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background: #c2551d; color: #fffdfb;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(36px, 5vw, 56px) 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px;">
+      <div style="font-size: 15px; font-weight: 500;">Christine Anh Hoang &mdash; Product Designer</div>
+      <nav style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 15px;">
+        <a href="index.html" style="color: #fffdfb;">Home</a>
+        <a href="about.html" style="color: #fffdfb;">About</a>
+        <a href="index.html#work" style="color: #fffdfb;">Work</a>
+        <a href="#contact" style="color: #fffdfb;">Contact</a>
+      </nav>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #fff4ec;">&copy; 2026 &middot; London</div>
+    </div>
+  </footer>
+
+  <sc-if value="{{ zoomOpen }}" hint-placeholder-val="{{ false }}">
+    <div role="dialog" aria-modal="true" aria-label="Full size image" style="position: fixed; inset: 0; z-index: 1000; background: rgba(150, 145, 142, 0.6); display: flex; flex-direction: column;">
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 20px; color: #17262b; border-bottom: 1px solid #e3d9d2; background: rgba(255, 253, 251, 0.94); font-family: Poppins, sans-serif; font-size: 14px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #4a5a60;">{{ zoomHint }}</span>
+        <button onClick="{{ closeZoom }}" aria-label="Close" style="padding: 10px 18px; border-radius: 999px; border: 0; background: #c2551d; color: #fffdfb; font-family: Poppins, sans-serif; font-size: 14px; font-weight: 500; cursor: pointer;">Close ✕</button>
+      </div>
+      <div ref="{{ scrollRef }}" style="flex: 1; overflow: auto; display: flex; padding: 20px;">
+        <img ref="{{ imgRef }}" alt="{{ zoomAlt }}" onClick="{{ toggleScale }}" style="{{ imgStyle }}">
+      </div>
+    </div>
+  </sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { open: false, actual: false, src: '', alt: '', zoomPx: null, mult: 1.4 };
+  scrollRef = React.createRef();
+  imgRef = React.createRef();
+  _setupReveal = (tries) => {
+    const secs = Array.from(document.querySelectorAll('section'));
+    if (secs.length < 4) { if (tries < 60) requestAnimationFrame(() => this._setupReveal(tries + 1)); return; }
+    if (!('IntersectionObserver' in window)) return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const targets = [];
+    secs.slice(1).forEach((sec) => {
+      const inner = sec.firstElementChild;
+      if (!inner) return;
+      let kids = Array.from(inner.children);
+      if (kids.length === 1 && kids[0].children.length > 1 && !kids[0].matches('figure, img')) kids = Array.from(kids[0].children);
+      const flat = [];
+      kids.forEach((k) => {
+        if (k.children.length > 1 && getComputedStyle(k).flexDirection === 'column' && !k.matches('figure')) Array.from(k.children).forEach((c) => flat.push(c));
+        else flat.push(k);
+      });
+      flat.forEach((el, i) => { el.classList.add('rv'); el.style.setProperty('--rv-d', Math.min(i, 6) * 80 + 'ms'); targets.push(el); });
+    });
+    this._rio = new IntersectionObserver((entries) => {
+      entries.forEach((en) => { if (en.isIntersecting) { en.target.classList.add('rv-in'); this._rio.unobserve(en.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    targets.forEach((t) => this._rio.observe(t));
+  };
+  componentDidMount() {
+    this._setupReveal(0);
+    this._key = (e) => { if (e.key === 'Escape' && this.state.open) this.close(); };
+    window.addEventListener('keydown', this._key);
+  }
+  componentWillUnmount() { window.removeEventListener('keydown', this._key); document.body.style.overflow = ''; }
+  componentDidUpdate() { const i = this.imgRef.current; if (i && this.state.src && i.getAttribute('src') !== this.state.src) i.setAttribute('src', this.state.src); }
+  openImg = (file, alt, mult) => {
+    const src = new URL(file, document.baseURI).href;
+    document.body.style.overflow = 'hidden';
+    this.setState({ open: true, actual: false, src, alt, zoomPx: null, mult: mult || 1.4 });
+  };
+  openJourney = () => this.openImg('./sca-user-journey.png', 'SCA user journey flowchart', 2.2);
+  openTrouble = () => this.openImg('./sca-wf-trouble.png', 'Wireframe: Have trouble logging in?');
+  openPopup = () => this.openImg('./sca-wf-popup.png', 'Wireframe: SCA pop-up');
+  openFinal = () => this.openImg('./sca-trouble-final.png', 'Final design: Having trouble with logging in?');
+  openPopupFinal = () => this.openImg('./sca-popup-final.png', 'SCA pop-up with app link and progress bar');
+  close = () => { document.body.style.overflow = ''; this.setState({ open: false }); };
+  toggle = (e) => {
+    const el = this.scrollRef.current;
+    const img = e && e.currentTarget && e.currentTarget.tagName === 'IMG' ? e.currentTarget : null;
+    let fx = 0.5, fy = 0.5, zoomPx = null;
+    if (img && !this.state.actual) {
+      const r = img.getBoundingClientRect();
+      fx = (e.clientX - r.left) / r.width; fy = (e.clientY - r.top) / r.height;
+      const nw = img.naturalWidth, nh = img.naturalHeight;
+      if (nw && nh) zoomPx = Math.round(Math.min(r.width, r.height * nw / nh) * this.state.mult) + 'px';
+    }
+    this.setState(s => ({ actual: !s.actual, zoomPx }), () => {
+      if (!el || !this.state.actual) return;
+      requestAnimationFrame(() => {
+        el.scrollLeft = fx * el.scrollWidth - el.clientWidth / 2;
+        el.scrollTop = fy * el.scrollHeight - el.clientHeight / 2;
+      });
+    });
+  };
+  renderVals() {
+    const a = this.state.actual;
+    return {
+      zoomOpen: this.state.open,
+      imgRef: this.imgRef,
+      scrollRef: this.scrollRef,
+      openJourney: this.openJourney,
+      openTrouble: this.openTrouble,
+      openPopup: this.openPopup,
+      openFinal: this.openFinal,
+      openPopupFinal: this.openPopupFinal,
+      closeZoom: this.close,
+      toggleScale: this.toggle,
+      zoomAlt: this.state.alt || 'Full size image',
+      zoomHint: a ? 'Scroll to pan · click to fit' : 'Click the image to zoom in · Esc to close',
+      imgStyle: a
+        ? { display: 'block', margin: 0, width: this.state.zoomPx || 'auto', height: 'auto', maxWidth: 'none', maxHeight: 'none', flex: '0 0 auto', alignSelf: 'flex-start', cursor: 'zoom-out' }
+        : { display: 'block', margin: 'auto', width: '100%', height: '100%', minWidth: 0, minHeight: 0, objectFit: 'contain', cursor: 'zoom-in' },
+    };
+  }
+}
+</script>
+</body>
+</html>

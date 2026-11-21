@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Poetsen+One&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<script src="./image-slot.js"></script>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #fffdfb; -webkit-font-smoothing: antialiased; }
+  a { color: #A9481A; text-decoration: none; }
+  a:hover { color: #23813B; }
+  ::selection { background: #F9D3EF; }
+  /* Brand colours: primary #D96827, primary text #A9481A, secondary #23813B, accent #E443B7, neutral #DFD0BD */
+  [style*="color: #c2551d"], [style*="color: rgb(194, 85, 29)"] { color: #A9481A !important; }
+  h1[style*="color: #c2551d"], h1[style*="color: rgb(194, 85, 29)"], h2[style*="color: #c2551d"], h2[style*="color: rgb(194, 85, 29)"] { color: #D96827 !important; }
+  footer[style*="background: #c2551d"], footer[style*="background: rgb(194, 85, 29)"] { background: #A9481A !important; }
+  [style*="background: #fdf3ef"], [style*="background: rgb(253, 243, 239)"] { background: #F5EEE6 !important; }
+  [style*="background: #fdf9f6"], [style*="background: rgb(253, 249, 246)"] { background: #FAF6F1 !important; }
+  [style*="#efe6e0"], [style*="rgb(239, 230, 224)"], [style*="#e9ded7"], [style*="rgb(233, 222, 215)"], [style*="#f0e8e3"], [style*="rgb(240, 232, 227)"] { border-color: #E8DDD0 !important; }
+  [style*="#ecd9cf"], [style*="rgb(236, 217, 207)"], [style*="#f0ddd3"], [style*="rgb(240, 221, 211)"] { border-color: #DFD0BD !important; }
+  [style*="color: #4a5a60"], [style*="color: rgb(74, 90, 96)"] { color: #2E3B40 !important; }
+  [style*="color: #5b6a70"], [style*="color: rgb(91, 106, 112)"] { color: #34434A !important; }
+  [style*="color: #5f6f74"], [style*="color: rgb(95, 111, 116)"] { color: #3A494F !important; }
+  figcaption { font-family: Poppins, system-ui, sans-serif !important; font-weight: 700 !important; letter-spacing: 0 !important; }
+  a[style*="border-radius: 999px"][style*="#d8cac1"], a[style*="border-radius: 999px"][style*="rgb(216, 202, 193)"], a[href="#contact"][style*="border-radius: 999px"] { background: #E443B7 !important; color: #000000 !important; border-color: #E443B7 !important; }
+  a[style*="border-radius: 999px"][style*="#d8cac1"]:hover, a[style*="border-radius: 999px"][style*="rgb(216, 202, 193)"]:hover, a[href="#contact"][style*="border-radius: 999px"]:hover { background: #EE7DCF !important; border-color: #EE7DCF !important; color: #000000 !important; }
+  html { scroll-behavior: smooth; }
+  .rv { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1); transition-delay: var(--rv-d, 0ms); }
+  .rv.rv-in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .rv { opacity: 1; transform: none; transition: none; } }
+  .nav-dd .nav-dd-menu { display: none; }
+  .nav-dd:hover .nav-dd-menu, .nav-dd:focus-within .nav-dd-menu { display: block; }
+</style>
+</helmet>
+<div style="font-family: Poppins, system-ui, sans-serif; color: #17262b; background: #fffdfb; overflow-x: hidden;">
+
+  <header style="position: sticky; top: 0; z-index: 50; background: rgba(255,253,251,0.88); backdrop-filter: blur(12px); border-bottom: 1px solid #efe6e0;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 16px 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;">
+      <a href="index.html" style="font-size: 15px; font-weight: 600; letter-spacing: -0.01em; color: #17262b;">Christine Anh Hoang</a>
+      <nav style="display: flex; align-items: center; gap: clamp(16px, 3vw, 40px); font-size: 15px; font-weight: 500;">
+        <a href="index.html" style="color: #17262b;">Home</a>
+        <a href="about.html" style="color: #17262b;">About</a>
+        <div class="nav-dd" style="position: relative; display: inline-flex;">
+        <a href="index.html#work" style="display: inline-flex; align-items: center; gap: 6px; color: #c2551d;">Work<span style="font-size: 9px; line-height: 1;">&#9662;</span></a>
+        <div class="nav-dd-menu" style="position: absolute; top: 100%; left: 50%; transform: translateX(-50%); padding-top: 14px; min-width: 288px; z-index: 60;">
+          <div style="background: #fffdfb; border: 1px solid #e9ded7; box-shadow: 0 14px 36px rgba(23,38,43,0.12); padding: 6px; display: flex; flex-direction: column;">
+        <a href="service-orders.html" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 14px; color: #17262b; font-size: 14px; font-weight: 500; line-height: 1.35;" style-hover="background: #fdf3ef; color: #c2551d;">
+          <span>Service orders</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Kaluza × AGL</span>
+        </a>
+        <a href="legacy-contracts.html" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 14px; color: #17262b; font-size: 14px; font-weight: 500; line-height: 1.35;" style-hover="background: #fdf3ef; color: #c2551d;">
+          <span>Deprecating a legacy contracts page</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Kaluza × OVO</span>
+        </a>
+        <a href="platform-adoption.html" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 14px; color: #17262b; font-size: 14px; font-weight: 500; line-height: 1.35;" style-hover="background: #fdf3ef; color: #c2551d;">
+          <span>Pushing adoption of the full feature suite</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Kaluza</span>
+        </a>
+        <a href="funding-structure.html" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 14px; color: #17262b; font-size: 14px; font-weight: 500; line-height: 1.35;" style-hover="background: #fdf3ef; color: #c2551d;">
+          <span>A streamlined funding structure</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Soldo</span>
+        </a>
+        <a href="strong-customer-authentication.html" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 14px; color: #17262b; font-size: 14px; font-weight: 500; line-height: 1.35;" style-hover="background: #fdf3ef; color: #c2551d;">
+          <span>Strong Customer Authentication</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Soldo</span>
+        </a>
+        <a href="yin-table.html" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 14px; color: #17262b; font-size: 14px; font-weight: 500; line-height: 1.35;" style-hover="background: #fdf3ef; color: #c2551d;">
+          <span>Yin Table</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Personal venture</span>
+        </a>
+            <a href="index.html#work" style="padding: 10px 14px; margin-top: 4px; border-top: 1px solid #f0e8e3; color: #c2551d; font-size: 13px; font-weight: 500;" style-hover="background: #fdf3ef; color: #c2551d;">All work &rarr;</a>
+          </div>
+        </div>
+      </div>
+        <a href="#contact" style="display: inline-flex; align-items: center; padding: 9px 18px; border-radius: 999px; background: #17262b; color: #fffdfb; font-weight: 500;" style-hover="background: #c2551d; color: #fffdfb;">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section style="max-width: 1240px; margin: 0 auto; padding: clamp(40px, 6vw, 80px) 28px clamp(28px, 4vw, 48px);">
+    <a href="index.html#work" style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.04em; color: #5f6f74;" style-hover="color: #c2551d;">&larr; All work</a>
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin: 26px 0 20px;">
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: #8a5236; background: #fdf3ef; border: 1px solid #f0ddd3; padding: 6px 12px; border-radius: 999px;">Personal venture</span>
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: #4a5a60; background: #f3f1ee; border: 1px solid #e7e3de; padding: 6px 12px; border-radius: 999px;">Research &amp; validation</span>
+    </div>
+    <h1 style="margin: 0; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(40px, 7vw, 86px); line-height: 1.02; letter-spacing: -0.02em; text-wrap: balance;">Yin Table</h1>
+    <p style="margin: clamp(20px, 3vw, 30px) 0 0; max-width: 58ch; font-size: clamp(17px, 1.6vw, 21px); line-height: 1.6; color: #4a5a60; text-wrap: pretty;">A service that partners with local restaurants to plan and cook wholesome meals for you.</p>
+  </section>
+
+  <section style="border-top: 1px solid #efe6e0; background: #F8EAF6;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(64px, 9vw, 120px) 28px; text-align: center; display: flex; flex-direction: column; align-items: center;">
+      <div style="display: inline-flex; align-items: center; gap: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #17262b;"><span style="width: 8px; height: 8px; border-radius: 50%; background: #23813B; display: inline-block; box-shadow: 0 0 0 4px rgba(35, 129, 59, 0.18);"></span>In progress</div>
+      <h2 style="margin: 16px 0 0; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(36px, 5vw, 64px); letter-spacing: -0.02em; color: #23813B; line-height: 1.05;">Coming soon</h2>
+      <p style="margin: 16px 0 0; font-size: clamp(16px, 1.5vw, 18px); line-height: 1.6; color: #34434A; max-width: 48ch; text-wrap: pretty;">I&rsquo;m in the discovery phase, researching how people approach meal planning. A full write-up of this project is on its way.</p>
+    </div>
+  </section>
+
+  <section style="border-top: 1px solid #efe6e0; background: #fdf9f6;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(40px, 5vw, 64px) 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px;">
+      <div>
+        <div style="font-family: 'Poetsen One', Poppins, sans-serif; font-size: 22px; letter-spacing: -0.01em; color: #23813B; margin-bottom: 8px;">Next project</div>
+        <a href="service-orders.html" style="font-family: 'Poetsen One', Poppins, sans-serif; font-size: clamp(22px, 2.6vw, 32px); letter-spacing: -0.02em; color: #17262b;" style-hover="color: #c2551d;">Service orders &rarr;</a>
+      </div>
+      <a href="index.html#work" style="display: inline-flex; align-items: center; padding: 14px 24px; border-radius: 999px; border: 1px solid #d8cac1; color: #17262b; font-size: 15px; font-weight: 500;" style-hover="border-color: #17262b; color: #17262b;">All work</a>
+    </div>
+  </section>
+
+  <section id="contact" style="background: #fffdfb; border-top: 1px solid #efe6e0;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(52px, 7vw, 100px) 28px; display: flex; flex-wrap: wrap; gap: clamp(28px, 5vw, 72px);">
+      <h2 style="margin: 0; flex: 0 1 220px; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(26px, 3vw, 38px); letter-spacing: -0.02em; color: #c2551d; line-height: 1.08;">Let&rsquo;s work together</h2>
+      <div style="flex: 1 1 440px; min-width: 0;">
+        <p style="margin: 0 0 clamp(20px, 3vw, 30px); font-size: clamp(17px, 1.6vw, 20px); line-height: 1.6; color: #4a5a60; max-width: 48ch; text-wrap: pretty;">Interested in Yin Table, or want to chat about the research? I&rsquo;d love to hear from you.</p>
+        <a href="mailto:christineanhhoang@gmail.com" style="display: inline-block; font-size: clamp(22px, 4vw, 48px); font-weight: 600; letter-spacing: -0.035em; color: #17262b; border-bottom: 2px solid #f0ddd3; padding-bottom: 6px; word-break: break-word;" style-hover="border-bottom-color: #c2551d; color: #c2551d;">christineanhhoang@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background: #c2551d; color: #fffdfb;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(36px, 5vw, 56px) 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px;">
+      <div style="font-size: 15px; font-weight: 500;">Christine Anh Hoang &mdash; Product Designer</div>
+      <nav style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 15px;">
+        <a href="index.html" style="color: #fffdfb;">Home</a>
+        <a href="about.html" style="color: #fffdfb;">About</a>
+        <a href="index.html#work" style="color: #fffdfb;">Work</a>
+        <a href="#contact" style="color: #fffdfb;">Contact</a>
+      </nav>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #fff4ec;">&copy; 2026 &middot; London</div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  _setupReveal = (tries) => {
+    const secs = Array.from(document.querySelectorAll('section'));
+    if (secs.length < 4) { if (tries < 60) requestAnimationFrame(() => this._setupReveal(tries + 1)); return; }
+    if (!('IntersectionObserver' in window)) return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const targets = [];
+    secs.slice(1).forEach((sec) => {
+      const inner = sec.firstElementChild;
+      if (!inner) return;
+      let kids = Array.from(inner.children);
+      if (kids.length === 1 && kids[0].children.length > 1 && !kids[0].matches('figure, img')) kids = Array.from(kids[0].children);
+      const flat = [];
+      kids.forEach((k) => {
+        if (k.children.length > 1 && getComputedStyle(k).flexDirection === 'column' && !k.matches('figure')) Array.from(k.children).forEach((c) => flat.push(c));
+        else flat.push(k);
+      });
+      flat.forEach((el, i) => { el.classList.add('rv'); el.style.setProperty('--rv-d', Math.min(i, 6) * 80 + 'ms'); targets.push(el); });
+    });
+    this._rio = new IntersectionObserver((entries) => {
+      entries.forEach((en) => { if (en.isIntersecting) { en.target.classList.add('rv-in'); this._rio.unobserve(en.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    targets.forEach((t) => this._rio.observe(t));
+  };
+  componentDidMount() { this._setupReveal(0); }
+  componentWillUnmount() { if (this._rio) this._rio.disconnect(); }
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

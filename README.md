@@ -2,4 +2,4 @@
 
 Product design portfolio, published with GitHub Pages.
 
-Exported from Claude Design. Pages: `index.html` (Home), `service-orders.html`.
+Built in Claude Design. Pages: `index.html` (Home), `about.html`, `service-orders.html`, `legacy-contracts.html`, `platform-adoption.html`, `funding-structure.html`, `strong-customer-authentication.html`, `yin-table.html`.

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Poetsen+One&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<script src="./image-slot.js"></script>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #fffdfb; -webkit-font-smoothing: antialiased; }
+  a { color: #A9481A; text-decoration: none; }
+  a:hover { color: #23813B; }
+  ::selection { background: #F9D3EF; }
+  /* Brand colours: primary #D96827, primary text #A9481A, secondary #23813B, accent #E443B7, neutral #DFD0BD */
+  [style*="color: #c2551d"] { color: #A9481A !important; }
+  h1[style*="color: #c2551d"], h2[style*="color: #c2551d"] { color: #D96827 !important; }
+  footer[style*="background: #c2551d"] { background: #A9481A !important; }
+  div[aria-hidden="true"][style*="background: #c2551d"] { background: #D96827 !important; }
+  span[style*="background: #c2551d"], button[style*="background: #c2551d"], a[style*="background: #c2551d"] { background: #23813B !important; }
+  [style*="background: #fdf3ef"] { background: #F5EEE6 !important; }
+  [style*="background: #fdf9f6"] { background: #FAF6F1 !important; }
+  [style*="background: #f3efec"], [style*="background: #e8eee6"] { background: #F2EBE2 !important; }
+  [style*="#efe6e0"], [style*="#e9ded7"], [style*="#f0e8e3"] { border-color: #E8DDD0 !important; }
+  [style*="#ecd9cf"], [style*="#f0ddd3"] { border-color: #DFD0BD !important; }
+  blockquote { border-left-color: #E443B7 !important; }
+  a[style*="border-radius: 999px"][style*="#d8cac1"], a[href="#contact"][style*="border-radius: 999px"] { background: #E443B7 !important; color: #000000 !important; border-color: #E443B7 !important; }
+  a[style*="border-radius: 999px"][style*="#d8cac1"]:hover, a[href="#contact"][style*="border-radius: 999px"]:hover { background: #EE7DCF !important; border-color: #EE7DCF !important; color: #000000 !important; }
+  html { scroll-behavior: smooth; }
+  #journey h3 { color: #23813B !important; }
+  [style*="color: #7b6355"][style*="padding-bottom: 12px"], [style*="color: rgb(123, 99, 85)"][style*="padding-bottom: 12px"] { color: #23813B !important; font-family: 'Poetsen One', Poppins, sans-serif !important; font-weight: 400 !important; font-size: 20px !important; letter-spacing: -0.01em !important; text-transform: none !important; }
+  #journey h3 + span { font-weight: 600 !important; color: #17262b !important; }
+  .nav-dd .nav-dd-menu { display: none; }
+  .nav-dd:hover .nav-dd-menu, .nav-dd:focus-within .nav-dd-menu { display: block; }
+</style>
+</helmet>
+<div style="font-family: Poppins, system-ui, sans-serif; color: #17262b; background: #fffdfb; overflow-x: hidden;">
+
+  <header style="position: sticky; top: 0; z-index: 50; background: rgba(255,253,251,0.88); backdrop-filter: blur(12px); border-bottom: 1px solid #efe6e0;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 16px 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;">
+      <a href="index.html" style="font-size: 15px; font-weight: 600; letter-spacing: -0.01em; color: #17262b;">Christine Anh Hoang</a>
+      <nav style="display: flex; align-items: center; gap: clamp(16px, 3vw, 40px); font-size: 15px; font-weight: 500;">
+        <a href="index.html" style="color: #17262b;">Home</a>
+        <a href="about.html" style="color: #c2551d;">About</a>
+        <div class="nav-dd" style="position: relative; display: inline-flex;">
+        <a href="index.html#work" style="display: inline-flex; align-items: center; gap: 6px; color: #17262b;">Work<span style="font-size: 9px; line-height: 1;">&#9662;</span></a>
+        <div class="nav-dd-menu" style="position: absolute; top: 100%; left: 50%; transform: translateX(-50%); padding-top: 14px; min-width: 288px; z-index: 60;">
+          <div style="background: #fffdfb; border: 1px solid #e9ded7; box-shadow: 0 14px 36px rgba(23,38,43,0.12); padding: 6px; display: flex; flex-direction: column;">
+        <a href="service-orders.html" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 14px; color: #17262b; font-size: 14px; font-weight: 500; line-height: 1.35;" style-hover="background: #fdf3ef; color: #c2551d;">
+          <span>Service orders</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Kaluza × AGL</span>
+        </a>
+        <a href="legacy-contracts.html" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 14px; color: #17262b; font-size: 14px; font-weight: 500; line-height: 1.35;" style-hover="background: #fdf3ef; color: #c2551d;">
+          <span>Deprecating a legacy contracts page</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Kaluza × OVO</span>
+        </a>
+        <a href="platform-adoption.html" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 14px; color: #17262b; font-size: 14px; font-weight: 500; line-height: 1.35;" style-hover="background: #fdf3ef; color: #c2551d;">
+          <span>Pushing adoption of the full feature suite</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Kaluza</span>
+        </a>
+        <a href="funding-structure.html" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 14px; color: #17262b; font-size: 14px; font-weight: 500; line-height: 1.35;" style-hover="background: #fdf3ef; color: #c2551d;">
+          <span>A streamlined funding structure</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Soldo</span>
+        </a>
+        <a href="strong-customer-authentication.html" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 14px; color: #17262b; font-size: 14px; font-weight: 500; line-height: 1.35;" style-hover="background: #fdf3ef; color: #c2551d;">
+          <span>Strong Customer Authentication</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Soldo</span>
+        </a>
+            <a href="index.html#work" style="padding: 10px 14px; margin-top: 4px; border-top: 1px solid #f0e8e3; color: #c2551d; font-size: 13px; font-weight: 500;" style-hover="background: #fdf3ef; color: #c2551d;">All work &rarr;</a>
+          </div>
+        </div>
+      </div>
+        <a href="#contact" style="display: inline-flex; align-items: center; padding: 9px 18px; border-radius: 999px; background: #17262b; color: #fffdfb; font-weight: 500;" style-hover="background: #c2551d; color: #fffdfb;">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section style="max-width: 1240px; margin: 0 auto; padding: clamp(48px, 8vw, 100px) 28px clamp(32px, 4vw, 56px); display: flex; flex-wrap: wrap; gap: clamp(28px, 5vw, 64px); align-items: flex-end;">
+    <div style="flex: 1 1 420px; min-width: 0;">
+      <h1 style="margin: 0; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(40px, 7vw, 88px); line-height: 1.02; letter-spacing: -0.02em; text-wrap: balance;">
+        Inside my <span style="color: #c2551d;">design journey</span>
+      </h1>
+      <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: clamp(24px, 3vw, 34px);">
+        <a href="Christineanhhoang_CV_Sept2026.pdf" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; padding: 15px 26px; border-radius: 999px; border: 1px solid #E443B7; background: #E443B7; color: #000000; font-size: 16px; font-weight: 500;" style-hover="background: #EE7DCF; border-color: #EE7DCF; color: #000000;">Download CV</a>
+      </div>
+    </div>
+    <div style="flex: 0 1 340px; min-width: 0; display: flex; justify-content: center;">
+      <div style="position: relative; width: 100%; aspect-ratio: 4 / 5; background: #e8eee6; border-radius: 16px; overflow: hidden;">
+        <image-slot id="about-portrait" shape="rounded" radius="16" placeholder="Portrait photo" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top: 1px solid #efe6e0; background: #fffdfb;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(56px, 8vw, 104px) 28px; display: flex; flex-wrap: wrap; gap: clamp(28px, 5vw, 72px);">
+      <div style="flex: 0 1 220px;">
+        <h2 style="margin: 0; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(28px, 3.2vw, 40px); letter-spacing: -0.02em; color: #c2551d; line-height: 1.08;">About me</h2>
+      </div>
+      <div style="flex: 1 1 440px; min-width: 0;">
+        <p style="margin: 0; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.62; color: #17262b; max-width: 60ch; text-wrap: pretty;">I get huge satisfaction from designing services end to end: interviewing users, testing ideas, defining the scope and technical capabilities with product managers and engineers, and seeing the impact. I have also worked with design trade-offs against delivery constraints and adapted AI into my ways of working.</p>
+        <p style="margin: 16px 0 0; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.62; color: #17262b; max-width: 60ch; text-wrap: pretty;">I am currently putting my product design skills into practice by testing a meal prep idea of my own. I&rsquo;m in the discovery phase, researching how people approach meal planning through interviews and questionnaire responses.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="journey" style="border-top: 1px solid #efe6e0; background: #fdf9f6;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(56px, 8vw, 104px) 28px; display: flex; flex-wrap: wrap; gap: clamp(28px, 5vw, 72px);">
+      <div style="flex: 0 1 220px;">
+        <h2 style="margin: 0; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(28px, 3.2vw, 40px); letter-spacing: -0.02em; color: #c2551d; line-height: 1.08;">My journey so far</h2>
+      </div>
+      <div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column;">
+
+        <div style="padding: clamp(22px, 3vw, 30px) 0; border-top: 1px solid #e9ded7;">
+          <div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 10px;">
+            <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 14px;">
+              <h3 style="margin: 0; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(21px, 2.1vw, 26px); letter-spacing: -0.01em;">Yin Table</h3>
+              <span style="font-size: 16px; color: #4a5a60;">Founder &middot; Discovery stage</span>
+            </div>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.04em; color: #5f6f74;">Sep 2026 &ndash; Present</span>
+          </div>
+          <p style="margin: 16px 0 0; font-size: 16px; line-height: 1.66; color: #5b6a70; max-width: 66ch; text-wrap: pretty;">A service that partners with local restaurants to plan and cook wholesome meals for you. Currently in discovery, testing the idea through interviews with potential customers and restaurants.</p>
+        </div>
+
+        <div style="padding: clamp(22px, 3vw, 30px) 0; border-top: 1px solid #e9ded7;">
+          <h3 style="margin: 0; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(21px, 2.1vw, 26px); letter-spacing: -0.01em;">Kaluza</h3>
+          <div style="margin-top: 16px; padding-left: 18px; border-left: 2px solid #E443B7;">
+            <div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 10px;">
+              <span style="font-size: 16px; font-weight: 600; color: #17262b;">Senior Product Designer</span>
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.04em; color: #5f6f74;">Sep 2023 &ndash; Sep 2026</span>
+            </div>
+            <p style="margin: 10px 0 0; font-size: 16px; line-height: 1.66; color: #5b6a70; max-width: 66ch; text-wrap: pretty;">Kaluza Retail automates core operations for energy retailers. I led the UX for the first-phase migration of a client&rsquo;s 4 million customer accounts onto our platform, and designed the payments journeys while experimenting with how AI can support the design team.</p>
+          </div>
+          <div style="margin-top: 20px; padding-left: 18px; border-left: 2px solid #E8DDD0;">
+            <div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 10px;">
+              <span style="font-size: 16px; font-weight: 600; color: #17262b;">UX Designer</span>
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.04em; color: #5f6f74;">Jan 2021 &ndash; Sep 2023</span>
+            </div>
+            <p style="margin: 10px 0 0; font-size: 16px; line-height: 1.66; color: #5b6a70; max-width: 66ch; text-wrap: pretty;">Executed the design and research for our customer care home, contracts and home moves services. Some of my projects include deprecating a legacy page, merging services and providing a visual guide for agents to meet compliance regulations.</p>
+          </div>
+        </div>
+
+        <div style="padding: clamp(22px, 3vw, 30px) 0; border-top: 1px solid #e9ded7;">
+          <div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 10px;">
+            <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 14px;">
+              <h3 style="margin: 0; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(21px, 2.1vw, 26px); letter-spacing: -0.01em;">Soldo</h3>
+              <span style="font-size: 16px; color: #4a5a60;">UX Designer</span>
+            </div>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.04em; color: #5f6f74;">2019 &ndash; 2021</span>
+          </div>
+          <p style="margin: 16px 0 0; font-size: 16px; line-height: 1.66; color: #5b6a70; max-width: 66ch; text-wrap: pretty;">Designed spend-management journeys for a fintech start-up &mdash; a streamlined card funding structure and Strong Customer Authentication that met the Payment Services Regulations without adding daily friction.</p>
+        </div>
+
+        <div style="padding: clamp(22px, 3vw, 30px) 0; border-top: 1px solid #e9ded7;">
+          <div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 10px;">
+            <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 14px;">
+              <h3 style="margin: 0; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(21px, 2.1vw, 26px); letter-spacing: -0.01em;">MOO Print</h3>
+              <span style="font-size: 16px; color: #4a5a60;">Account Executive</span>
+            </div>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.04em; color: #5f6f74;">2016 &ndash; 2019</span>
+          </div>
+          <p style="margin: 16px 0 0; font-size: 16px; line-height: 1.66; color: #5b6a70; max-width: 66ch; text-wrap: pretty;">Won the largest deal in company history with Red Bull through a stand at the Cannes Lions Festival. Collaborated with product and design on bespoke products and supported the research team.</p>
+        </div>
+
+        <div style="padding: clamp(22px, 3vw, 30px) 0; border-top: 1px solid #e9ded7; border-bottom: 1px solid #e9ded7;">
+          <div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 10px;">
+            <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 14px;">
+              <h3 style="margin: 0; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(21px, 2.1vw, 26px); letter-spacing: -0.01em;">Fudoshin Tattoos</h3>
+              <span style="font-size: 16px; color: #4a5a60;">Tattoo Apprentice</span>
+            </div>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.04em; color: #5f6f74;">2012 &ndash; 2015</span>
+          </div>
+          <p style="margin: 16px 0 0; font-size: 16px; line-height: 1.66; color: #5b6a70; max-width: 66ch; text-wrap: pretty;">Worked under an artist specialising in Japanese tattoos, tattooing traditional-style designs from my own hand-drawn artwork, painting flash and building relationships with long-standing customers.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top: 1px solid #efe6e0; background: #fffdfb;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(56px, 8vw, 104px) 28px; display: flex; flex-wrap: wrap; gap: clamp(28px, 5vw, 72px);">
+      <div style="flex: 0 1 220px;">
+        <h2 style="margin: 0; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(28px, 3.2vw, 40px); letter-spacing: -0.02em; color: #c2551d; line-height: 1.08;">Achievements</h2>
+      </div>
+      <div style="flex: 1 1 440px; min-width: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 1px; background: #e9ded7; border: 1px solid #e9ded7;">
+        <div style="background: #fffdfb; padding: clamp(22px, 3vw, 30px);">
+          <div style="font-family: 'Poetsen One', Poppins, sans-serif; font-size: clamp(32px, 3.6vw, 44px); letter-spacing: -0.02em;">5 sec</div>
+          <div style="font-size: 15px; color: #4a5a60; margin-top: 10px; line-height: 1.5;">Reduction in agent time on task</div>
+        </div>
+        <div style="background: #fffdfb; padding: clamp(22px, 3vw, 30px);">
+          <div style="font-family: 'Poetsen One', Poppins, sans-serif; font-size: clamp(32px, 3.6vw, 44px); letter-spacing: -0.02em;">2 min</div>
+          <div style="font-size: 15px; color: #4a5a60; margin-top: 10px; line-height: 1.5;">Saved on a new journey</div>
+        </div>
+        <div style="background: #fffdfb; padding: clamp(22px, 3vw, 30px);">
+          <div style="font-family: 'Poetsen One', Poppins, sans-serif; font-size: clamp(32px, 3.6vw, 44px); letter-spacing: -0.02em;">3</div>
+          <div style="font-size: 15px; color: #4a5a60; margin-top: 10px; line-height: 1.5;">New global clients onboarded</div>
+        </div>
+        <div style="background: #fffdfb; padding: clamp(22px, 3vw, 30px);">
+          <div style="font-family: 'Poetsen One', Poppins, sans-serif; font-size: clamp(32px, 3.6vw, 44px); letter-spacing: -0.02em;">2</div>
+          <div style="font-size: 15px; color: #4a5a60; margin-top: 10px; line-height: 1.5;">Courses completed &mdash; AI and negotiation</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top: 1px solid #efe6e0; background: #fdf3ef;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(56px, 8vw, 104px) 28px; display: flex; flex-wrap: wrap; gap: clamp(28px, 5vw, 72px);">
+      <div style="flex: 0 1 220px;">
+        <h2 style="margin: 0; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(28px, 3.2vw, 40px); letter-spacing: -0.02em; color: #c2551d; line-height: 1.08;">Skills &amp; tools</h2>
+      </div>
+      <div style="flex: 1 1 440px; min-width: 0;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); gap: clamp(28px, 4vw, 48px);">
+          <div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #7b6355; padding-bottom: 12px; border-bottom: 1px solid #ecd9cf;">Craft</div>
+            <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 16px; font-size: 16px; color: #3c4c52;">
+              <span>Wireframing</span>
+              <span>Prototyping</span>
+              <span>Service maps</span>
+              <span>User journeys</span>
+              <span>HTML &amp; CSS</span>
+            </div>
+          </div>
+          <div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #7b6355; padding-bottom: 12px; border-bottom: 1px solid #ecd9cf;">Research</div>
+            <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 16px; font-size: 16px; color: #3c4c52;">
+              <span>User research</span>
+              <span>Usability testing</span>
+              <span>Workshops</span>
+              <span>Product trio</span>
+              <span>System integration</span>
+            </div>
+          </div>
+          <div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #7b6355; padding-bottom: 12px; border-bottom: 1px solid #ecd9cf;">Working with people</div>
+            <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 16px; font-size: 16px; color: #3c4c52;">
+              <span>Stakeholder management</span>
+              <span>Cross-team collaboration</span>
+              <span>Presenting</span>
+            </div>
+          </div>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: clamp(28px, 4vw, 40px);">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: #7b4a2c; background: #fffdfb; border: 1px solid #ecd9cf; padding: 8px 14px; border-radius: 999px;">Figma</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: #7b4a2c; background: #fffdfb; border: 1px solid #ecd9cf; padding: 8px 14px; border-radius: 999px;">Figma Make</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: #7b4a2c; background: #fffdfb; border: 1px solid #ecd9cf; padding: 8px 14px; border-radius: 999px;">Claude Design</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: #7b4a2c; background: #fffdfb; border: 1px solid #ecd9cf; padding: 8px 14px; border-radius: 999px;">Dovetail</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top: 1px solid #efe6e0; background: #fffdfb;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(56px, 8vw, 104px) 28px; display: flex; flex-wrap: wrap; gap: clamp(28px, 5vw, 72px);">
+      <div style="flex: 0 1 220px;">
+        <h2 style="margin: 0; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(28px, 3.2vw, 40px); letter-spacing: -0.02em; color: #c2551d; line-height: 1.08;">Outside work</h2>
+      </div>
+      <div style="flex: 1 1 440px; min-width: 0;">
+        <p style="margin: 0; font-size: clamp(17px, 1.7vw, 21px); line-height: 1.6; color: #3c4c52; max-width: 56ch; text-wrap: pretty;">Outside of work, I enjoy spending time outdoors with my family and staying active. I love cooking from scratch and creating healthy dishes, recently developing a nut-free, school-friendly snack recipe. Travelling gives me fresh perspectives and inspiration, especially when exploring new cultures and art exhibitions.</p>
+        <p style="margin: 16px 0 0; font-size: 16px; line-height: 1.66; color: #5b6a70; max-width: 62ch; text-wrap: pretty;">Fun fact: I was once a tattoo apprentice, where I learned to tattoo my designs on different areas of the body. I revelled in sketching ideas and building rapport with customers.</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); gap: clamp(12px, 1.6vw, 20px); margin-top: clamp(28px, 4vw, 40px);">
+          <div style="position: relative; aspect-ratio: 3 / 4; background: #e8eee6; border-radius: 16px; overflow: hidden;">
+            <image-slot id="about-life-1" shape="rounded" radius="16" placeholder="Family / outdoors" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot>
+          </div>
+          <div style="position: relative; aspect-ratio: 3 / 4; background: #edefe9; border-radius: 16px; overflow: hidden;">
+            <image-slot id="about-life-2" shape="rounded" radius="16" placeholder="Cooking" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot>
+          </div>
+          <div style="position: relative; aspect-ratio: 3 / 4; background: #e6ecf4; border-radius: 16px; overflow: hidden;">
+            <image-slot id="about-life-3" shape="rounded" radius="16" placeholder="Tattooing" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="background: #fffdfb; border-top: 1px solid #efe6e0;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(60px, 8vw, 116px) 28px; display: flex; flex-wrap: wrap; gap: clamp(28px, 5vw, 72px);">
+      <h2 style="margin: 0; flex: 0 1 220px; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(28px, 3.2vw, 40px); letter-spacing: -0.02em; color: #c2551d; line-height: 1.08;">Let&rsquo;s work together</h2>
+      <div style="flex: 1 1 440px; min-width: 0;">
+        <p style="margin: 0 0 clamp(24px, 3vw, 34px); font-size: clamp(17px, 1.6vw, 20px); line-height: 1.6; color: #4a5a60; max-width: 48ch; text-wrap: pretty;">Have a project in mind? I&rsquo;d love to connect.</p>
+        <a href="mailto:christineanhhoang@gmail.com" style="display: inline-block; font-size: clamp(22px, 4.2vw, 52px); font-weight: 600; letter-spacing: -0.035em; color: #17262b; border-bottom: 2px solid #f0ddd3; padding-bottom: 6px; word-break: break-word;" style-hover="border-bottom-color: #c2551d; color: #c2551d;">christineanhhoang@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background: #c2551d; color: #fffdfb;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(36px, 5vw, 56px) 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px;">
+      <div style="font-size: 15px; font-weight: 500;">Christine Anh Hoang &mdash; Product Designer</div>
+      <nav style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 15px;">
+        <a href="index.html" style="color: #fffdfb;">Home</a>
+        <a href="about.html" style="color: #fffdfb;">About</a>
+        <a href="index.html#work" style="color: #fffdfb;">Work</a>
+        <a href="#contact" style="color: #fffdfb;">Contact</a>
+      </nav>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #fff4ec;">&copy; 2026 &middot; London</div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+</body>
+</html>

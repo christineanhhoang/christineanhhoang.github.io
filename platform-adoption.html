@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Poetsen+One&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<script src="./image-slot.js"></script>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #fffdfb; -webkit-font-smoothing: antialiased; }
+  a { color: #A9481A; text-decoration: none; }
+  a:hover { color: #23813B; }
+  ::selection { background: #F9D3EF; }
+  /* Brand colours: primary #D96827, primary text #A9481A, secondary #23813B, accent #E443B7, neutral #DFD0BD */
+  [style*="color: #c2551d"], [style*="color: rgb(194, 85, 29)"] { color: #A9481A !important; }
+  h1[style*="color: #c2551d"], h1[style*="color: rgb(194, 85, 29)"], h2[style*="color: #c2551d"], h2[style*="color: rgb(194, 85, 29)"] { color: #D96827 !important; }
+  footer[style*="background: #c2551d"], footer[style*="background: rgb(194, 85, 29)"] { background: #A9481A !important; }
+  div[aria-hidden="true"][style*="background: #c2551d"], div[aria-hidden="true"][style*="background: rgb(194, 85, 29)"] { background: #D96827 !important; }
+  span[style*="background: #c2551d"], span[style*="background: rgb(194, 85, 29)"], button[style*="background: #c2551d"], button[style*="background: rgb(194, 85, 29)"] { background: #23813B !important; }
+  [style*="background: #fdf3ef"], [style*="background: rgb(253, 243, 239)"] { background: #F5EEE6 !important; }
+  [style*="background: #fdf9f6"], [style*="background: rgb(253, 249, 246)"] { background: #FAF6F1 !important; }
+  [style*="background: #f3efec"], [style*="background: rgb(243, 239, 236)"], [style*="background: #e8eee6"], [style*="background: rgb(232, 238, 230)"] { background: #F2EBE2 !important; }
+  [style*="#efe6e0"], [style*="rgb(239, 230, 224)"], [style*="#e9ded7"], [style*="rgb(233, 222, 215)"], [style*="#f0e8e3"], [style*="rgb(240, 232, 227)"] { border-color: #E8DDD0 !important; }
+  [style*="#ecd9cf"], [style*="rgb(236, 217, 207)"], [style*="#f0ddd3"], [style*="rgb(240, 221, 211)"] { border-color: #DFD0BD !important; }
+  blockquote { border-left-color: #E443B7 !important; }
+  figcaption { font-family: Poppins, system-ui, sans-serif !important; font-weight: 700 !important; letter-spacing: 0 !important; }
+  figcaption > span:not([style*="999px"]) { font-weight: 700 !important; }
+  [style*="color: #4a5a60"], [style*="color: rgb(74, 90, 96)"] { color: #2E3B40 !important; }
+  [style*="color: #5b6a70"], [style*="color: rgb(91, 106, 112)"] { color: #34434A !important; }
+  [style*="color: #5f6f74"], [style*="color: rgb(95, 111, 116)"] { color: #3A494F !important; }
+  a[style*="border-radius: 999px"][style*="#d8cac1"], a[style*="border-radius: 999px"][style*="rgb(216, 202, 193)"], a[href="#contact"][style*="border-radius: 999px"] { background: #E443B7 !important; color: #000000 !important; border-color: #E443B7 !important; }
+  a[style*="border-radius: 999px"][style*="#d8cac1"]:hover, a[style*="border-radius: 999px"][style*="rgb(216, 202, 193)"]:hover, a[href="#contact"][style*="border-radius: 999px"]:hover { background: #EE7DCF !important; border-color: #EE7DCF !important; color: #000000 !important; }
+  html { scroll-behavior: smooth; }
+  .rv { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1); transition-delay: var(--rv-d, 0ms); }
+  .rv.rv-in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .rv { opacity: 1; transform: none; transition: none; } }
+  .nav-dd .nav-dd-menu { display: none; }
+  .nav-dd:hover .nav-dd-menu, .nav-dd:focus-within .nav-dd-menu { display: block; }
+</style>
+</helmet>
+<div style="font-family: Poppins, system-ui, sans-serif; color: #17262b; background: #fffdfb; overflow-x: hidden;">
+
+  <header style="position: sticky; top: 0; z-index: 50; background: rgba(255,253,251,0.88); backdrop-filter: blur(12px); border-bottom: 1px solid #efe6e0;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 16px 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;">
+      <a href="index.html" style="font-size: 15px; font-weight: 600; letter-spacing: -0.01em; color: #17262b;">Christine Anh Hoang</a>
+      <nav style="display: flex; align-items: center; gap: clamp(16px, 3vw, 40px); font-size: 15px; font-weight: 500;">
+        <a href="index.html" style="color: #17262b;">Home</a>
+        <a href="about.html" style="color: #17262b;">About</a>
+        <div class="nav-dd" style="position: relative; display: inline-flex;">
+        <a href="index.html#work" style="display: inline-flex; align-items: center; gap: 6px; color: #c2551d;">Work<span style="font-size: 9px; line-height: 1;">&#9662;</span></a>
+        <div class="nav-dd-menu" style="position: absolute; top: 100%; left: 50%; transform: translateX(-50%); padding-top: 14px; min-width: 288px; z-index: 60;">
+          <div style="background: #fffdfb; border: 1px solid #e9ded7; box-shadow: 0 14px 36px rgba(23,38,43,0.12); padding: 6px; display: flex; flex-direction: column;">
+        <a href="service-orders.html" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 14px; color: #17262b; font-size: 14px; font-weight: 500; line-height: 1.35;" style-hover="background: #fdf3ef; color: #c2551d;">
+          <span>Service orders</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Kaluza × AGL</span>
+        </a>
+        <a href="legacy-contracts.html" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 14px; color: #17262b; font-size: 14px; font-weight: 500; line-height: 1.35;" style-hover="background: #fdf3ef; color: #c2551d;">
+          <span>Deprecating a legacy contracts page</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Kaluza × OVO</span>
+        </a>
+        <a href="platform-adoption.html" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 14px; color: #17262b; font-size: 14px; font-weight: 500; line-height: 1.35;" style-hover="background: #fdf3ef; color: #c2551d;">
+          <span>Pushing adoption of the full feature suite</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Kaluza</span>
+        </a>
+        <a href="funding-structure.html" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 14px; color: #17262b; font-size: 14px; font-weight: 500; line-height: 1.35;" style-hover="background: #fdf3ef; color: #c2551d;">
+          <span>A streamlined funding structure</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Soldo</span>
+        </a>
+        <a href="strong-customer-authentication.html" style="display: flex; flex-direction: column; gap: 3px; padding: 10px 14px; color: #17262b; font-size: 14px; font-weight: 500; line-height: 1.35;" style-hover="background: #fdf3ef; color: #c2551d;">
+          <span>Strong Customer Authentication</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #5f6f74;">Soldo</span>
+        </a>
+            <a href="index.html#work" style="padding: 10px 14px; margin-top: 4px; border-top: 1px solid #f0e8e3; color: #c2551d; font-size: 13px; font-weight: 500;" style-hover="background: #fdf3ef; color: #c2551d;">All work &rarr;</a>
+          </div>
+        </div>
+      </div>
+        <a href="#contact" style="display: inline-flex; align-items: center; padding: 9px 18px; border-radius: 999px; background: #17262b; color: #fffdfb; font-weight: 500;" style-hover="background: #c2551d; color: #fffdfb;">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section style="max-width: 1240px; margin: 0 auto; padding: clamp(40px, 6vw, 80px) 28px clamp(28px, 4vw, 48px);">
+    <a href="index.html#work" style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.04em; color: #5f6f74;" style-hover="color: #c2551d;">&larr; All work</a>
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin: 26px 0 20px;">
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: #8a5236; background: #fdf3ef; border: 1px solid #f0ddd3; padding: 6px 12px; border-radius: 999px;">Kaluza</span>
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: #4a5a60; background: #f3f1ee; border: 1px solid #e7e3de; padding: 6px 12px; border-radius: 999px;">Adoption research</span>
+    </div>
+    <h1 style="margin: 0; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(40px, 7vw, 86px); line-height: 1.02; letter-spacing: -0.02em; text-wrap: balance;">Pushing adoption of the full feature suite</h1>
+  </section>
+
+  <section style="max-width: 1240px; margin: 0 auto; padding: 0 28px clamp(40px, 5vw, 64px);">
+    <div style="position: relative; width: 100%; aspect-ratio: 16 / 8; background: #e8eee6;">
+      <image-slot id="pa-hero" shape="rect" placeholder="Hero image" style="position: absolute; inset: 0; width: 100%; height: 100%;"></image-slot>
+    </div>
+  </section>
+
+  <section style="border-top: 1px solid #efe6e0; background: #fffdfb;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(40px, 5vw, 64px) 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); gap: clamp(20px, 3vw, 40px);">
+      <div>
+        <div style="font-family: 'Poetsen One', Poppins, sans-serif; font-size: 22px; letter-spacing: -0.01em; color: #23813B; margin-bottom: 8px;">Role</div>
+        <div style="font-size: 16px; line-height: 1.55; color: #17262b;">Product designer</div>
+      </div>
+      <div>
+        <div style="font-family: 'Poetsen One', Poppins, sans-serif; font-size: 22px; letter-spacing: -0.01em; color: #23813B; margin-bottom: 8px;">Team</div>
+        <div style="font-size: 16px; line-height: 1.55; color: #17262b;">Product designer (me), product manager and front-end engineers</div>
+      </div>
+      <div>
+        <div style="font-family: 'Poetsen One', Poppins, sans-serif; font-size: 22px; letter-spacing: -0.01em; color: #23813B; margin-bottom: 8px;">Sprint</div>
+        <div style="font-size: 16px; line-height: 1.55; color: #17262b;">2 weeks</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top: 1px solid #efe6e0; background: #fffdfb;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(52px, 7vw, 96px) 28px; display: flex; flex-wrap: wrap; gap: clamp(28px, 5vw, 72px);">
+      <div style="flex: 0 1 220px;">
+        <h2 style="margin: 0; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(26px, 3vw, 36px); letter-spacing: -0.02em; color: #D96827; line-height: 1.08;">The problem</h2>
+      </div>
+      <div style="flex: 1 1 440px; min-width: 0;">
+        <p style="margin: 18px 0 0; font-size: 16px; line-height: 1.66; color: #5b6a70; max-width: 64ch; text-wrap: pretty;">The Kaluza Agent Experience (KAE) was underutilized due to its default access method. Agents begin customer inquiries in Salesforce and use a back command menu to access individual services like contract views and meter reads. This limited view prevents them from seeing the navigation bar, reducing awareness of KAE’s full suite of services.</p>
+        <div style="display: flex; flex-direction: column; margin-top: clamp(28px, 3.5vw, 40px);">
+          <div style="display: flex; gap: clamp(16px, 2.5vw, 32px); padding: clamp(20px, 2.6vw, 28px) 0; border-top: 1px solid #E443B7;">
+            <div style="flex: 0 0 36px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 700; color: #E443B7; padding-top: 5px;">01</div>
+            <div style="min-width: 0;">
+              <h3 style="margin: 0 0 10px; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(19px, 2vw, 24px); letter-spacing: -0.01em; color: #23813B;">My responsibilities</h3>
+              <p style="margin: 0; font-size: 16px; line-height: 1.66; color: #5b6a70; max-width: 62ch; text-wrap: pretty;">To improve the user experience and encourage full tool adoption, the business proposed embedding KAE directly into Salesforce. Our client agreed to a two-week trial of this embedded modal. My role was to research how agents currently use KAE and assess whether the embedded version provided a better solution.</p>
+              <p style="margin: 14px 0 0; font-size: 16px; line-height: 1.66; color: #5b6a70; max-width: 62ch; text-wrap: pretty;">I identified how oversized fonts and excessive white space reduced agent visibility, and worked with product management and engineering to decrease padding and font size on the agent experience platform.</p>
+            </div>
+          </div>
+          <div style="display: flex; gap: clamp(16px, 2.5vw, 32px); padding: clamp(20px, 2.6vw, 28px) 0; border-top: 1px solid #E443B7;">
+            <div style="flex: 0 0 36px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 700; color: #E443B7; padding-top: 5px;">02</div>
+            <div style="min-width: 0;">
+              <h3 style="margin: 0 0 10px; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(19px, 2vw, 24px); letter-spacing: -0.01em; color: #23813B;">The challenge</h3>
+              <p style="margin: 0; font-size: 16px; line-height: 1.66; color: #5b6a70; max-width: 62ch; text-wrap: pretty;">The project took place during the energy price hike, this increased the volume of calls significantly which put pressure on agents to work as fast as possible, leading them to rely on familiar workflows rather than adopt the new feature.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top: 1px solid #efe6e0; background: #fffdfb;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(52px, 7vw, 88px) 28px;">
+      <h2 style="margin: 0 0 clamp(16px, 2vw, 24px); font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(26px, 3vw, 36px); letter-spacing: -0.02em; color: #D96827;">Phase one</h2>
+      <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: clamp(28px, 4vw, 56px);">
+        <div style="flex: 1 1 380px; min-width: 0;">
+          <h3 style="margin: 0 0 14px; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(19px, 2vw, 24px); letter-spacing: -0.01em; color: #23813B;">Pilot</h3>
+          <div ref="{{ pilotRef }}" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 0 0 20px; max-width: 520px;">
+            <div style="background: #F8EAF6; border-radius: 14px; padding: 16px 18px;"><div aria-hidden="true" style="font-family: 'Poetsen One', Poppins, sans-serif; font-size: clamp(32px, 4vw, 44px); line-height: 1; color: #23813B;">{{ pilotAgents }}</div><div style="font-size: 14px; font-weight: 500; color: #17262b; margin-top: 6px;"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);">19 </span>Customer care agents</div></div>
+            <div style="background: #F8EAF6; border-radius: 14px; padding: 16px 18px;"><div aria-hidden="true" style="font-family: 'Poetsen One', Poppins, sans-serif; font-size: clamp(32px, 4vw, 44px); line-height: 1; color: #23813B;">{{ pilotLead }}</div><div style="font-size: 14px; font-weight: 500; color: #17262b; margin-top: 6px;"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);">1 </span>Team lead</div></div>
+            <div style="background: #F8EAF6; border-radius: 14px; padding: 16px 18px;"><div aria-hidden="true" style="font-family: 'Poetsen One', Poppins, sans-serif; font-size: clamp(32px, 4vw, 44px); line-height: 1; color: #23813B;">{{ pilotWeeks }}</div><div style="font-size: 14px; font-weight: 500; color: #17262b; margin-top: 6px;"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);">2 </span>Weeks</div></div>
+          </div>
+          <p style="margin: 0 0 18px; font-size: 17.168px; line-height: 1.6; color: #4a5a60; max-width: 60ch; text-wrap: pretty;">I collaborated with 19 customer care agents, including a team lead, over a two-week period. We began with a feedback session where agents shared their experiences with KAE compared to their current Salesforce workflow.</p>
+          <p style="margin: 0; font-size: 17.168px; line-height: 1.6; color: #4a5a60; max-width: 60ch; text-wrap: pretty;">I worked with the training manager to develop a user guide, which agents accessed through an online learning course. Throughout the experiment, I conducted interviews and observed agents in person to assess whether KAE embed improved their workflow.</p>
+        </div>
+        <figure style="margin: 0; flex: 1 1 340px; max-width: 560px; display: flex; flex-direction: column; gap: 10px;">
+          <div style="border-radius: 12px; overflow: hidden; border: 1px solid #ecd9cf;">
+            <img src="./pa-pilot.jpg" alt="An agent's hands on a laptop keyboard during an in-person observation session, with the Kaluza Agent Experience open on screen and a headset on the desk" style="display: block; width: 100%; height: auto;">
+          </div>
+          <figcaption style="font-size: 14px; color: #4a5a60;">Observing an agent using KAE during the pilot.</figcaption>
+        </figure>
+      </div>
+      <figure style="margin: clamp(32px, 4vw, 48px) 0 0; display: flex; flex-direction: column; gap: 10px;">
+        <div style="border-radius: 12px; overflow: hidden; border: 1px solid #ecd9cf;">
+          <img src="./pa-backslash-menu.png" alt="KAE opened in Salesforce through the backslash command menu: a pop-up list of tasks such as Add transaction, Amend contracts and Tariff hop covers the account view" style="display: block; width: 100%; height: auto;">
+        </div>
+        <figcaption style="font-size: 14px; color: #4a5a60;">The backslash command menu agents used to open individual KAE services from Salesforce.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section style="border-top: 1px solid #efe6e0; background: #F2E4D3;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(52px, 7vw, 88px) 28px;">
+      <h2 style="margin: 0 0 clamp(24px, 3vw, 36px); font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(26px, 3vw, 36px); letter-spacing: -0.02em; color: #23813B;">How we measured success</h2>
+      <p style="margin: 0 0 clamp(20px, 3vw, 28px); font-size: 17.168px; line-height: 1.6; color: #4a5a60; max-width: 64ch; text-wrap: pretty;">The two key pillars of success were:</p>
+      <div style="display: flex; flex-direction: column; max-width: 760px;">
+        <div style="display: flex; gap: clamp(16px, 2.5vw, 32px); padding: clamp(18px, 2.4vw, 24px) 0; border-top: 1px solid #E443B7;">
+          <div style="flex: 0 0 36px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 700; color: #E443B7; padding-top: 4px;">01</div>
+          <p style="margin: 0; font-size: 17.168px; line-height: 1.6; color: #4a5a60; text-wrap: pretty;">Agents actively used KAE embed and found it more efficient with a better user experience than accessing KAE through the backslash menu.</p>
+        </div>
+        <div style="display: flex; gap: clamp(16px, 2.5vw, 32px); padding: clamp(18px, 2.4vw, 24px) 0; border-top: 1px solid #E443B7; border-bottom: 1px solid #E443B7;">
+          <div style="flex: 0 0 36px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 700; color: #E443B7; padding-top: 4px;">02</div>
+          <p style="margin: 0; font-size: 17.168px; line-height: 1.6; color: #4a5a60; text-wrap: pretty;">We measured the impact on average handling time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top: 1px solid #efe6e0; background: #fffdfb;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(52px, 7vw, 88px) 28px;">
+      <h2 style="margin: 0 0 clamp(24px, 3vw, 36px); font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(26px, 3vw, 36px); letter-spacing: -0.02em; color: #D96827;">What we discovered</h2>
+      <p style="margin: 0 0 18px; font-size: 17.168px; line-height: 1.6; color: #4a5a60; max-width: 64ch; text-wrap: pretty;">I shadowed agents on calls and in person, observing that some did not use KAE embed, especially during the energy price increase. Under pressure from high call volumes and concerned customers, they defaulted to familiar workflows.</p>
+      <p style="margin: 0 0 18px; font-size: 17.168px; line-height: 1.6; color: #4a5a60; max-width: 64ch; text-wrap: pretty;">During observations, I noticed that KAE’s interface was too large for its embedded space in Salesforce, making visibility difficult. Some agents also shared this feedback.</p>
+      <div ref="{{ statsRef }}" style="display: flex; flex-wrap: wrap; align-items: center; gap: clamp(20px, 3vw, 40px); margin: clamp(8px, 1vw, 12px) 0 0; padding: clamp(24px, 3vw, 36px); border-radius: 16px; background: #F8EAF6; max-width: 900px;">
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <span aria-hidden="true" style="{{ arrowStyle }}">↓</span>
+          <span aria-hidden="true" style="font-family: 'Poetsen One', Poppins, sans-serif; font-size: clamp(56px, 8vw, 88px); line-height: 1; color: #23813B;">{{ ahtLabel }}<span style="font-size: 0.4em; margin-left: 6px;">min</span></span>
+        </div>
+        <div style="flex: 1 1 280px; min-width: 0; display: flex; flex-direction: column; gap: 10px;">
+          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px;">
+            <span style="font-size: 17px; font-weight: 600; color: #17262b;">Reduction in average handling time (AHT)</span>
+            <span style="{{ chipStyle }}">After 2 weeks</span>
+          </div>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #4a5a60; text-wrap: pretty;">After two weeks, we recorded a 1.6-minute reduction in AHT, likely due to KAE embed minimizing the number of open tabs.</p>
+        </div>
+      </div>
+      <figure style="margin: clamp(28px, 4vw, 44px) 0 0; display: flex; flex-direction: column; gap: 10px;">
+        <div style="border-radius: 12px; overflow: hidden;">
+          <img src="./pa-aht-chart.png" alt="Line chart of average handling time in minutes from 27 February to 27 March 2022 for test agents using KAE embed and control agents. After the experiment start on 14 March, test agent AHT drops to as low as about 11.4 minutes, compared with roughly 13 to 14 minutes for control agents." style="display: block; width: 100%; height: auto;">
+        </div>
+        <figcaption style="font-size: 14px; color: #4a5a60;">Average handling time (AHT) for test agents using KAE embed compared with control agents, before and after the experiment started.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section style="border-top: 1px solid #efe6e0; background: #fffdfb;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(52px, 7vw, 88px) 28px;">
+      <h2 style="margin: 0 0 clamp(24px, 3vw, 36px); font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(26px, 3vw, 36px); letter-spacing: -0.02em; color: #D96827;">Phase two</h2>
+      <p style="margin: 0 0 18px; font-size: 17.168px; line-height: 1.6; color: #4a5a60; max-width: 64ch; text-wrap: pretty;">I collaborated with engineers to reduce font size and whitespace, significantly minimizing scrolling.</p>
+      <p style="margin: 0 0 clamp(24px, 3vw, 36px); font-size: 17.168px; line-height: 1.6; color: #4a5a60; max-width: 64ch; text-wrap: pretty;">After the KAE embed was released to all agents alongside a training course, the backslash menu remained accessible. Seven months later, I surveyed agents and found that all had adopted KAE embed over the backslash menu, citing its ease of use and centralised access. Overall tool usage increased, and 92% of agents reported that KAE embed improved their ability with supporting customers.</p>
+      <div ref="{{ phase2Ref }}" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 16px; margin: 0 0 clamp(32px, 4vw, 48px);">
+        <div style="background: #F8EAF6; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 10px;">
+          <span aria-hidden="true" style="font-family: 'Poetsen One', Poppins, sans-serif; font-size: clamp(40px, 5vw, 56px); line-height: 1; color: #23813B;">{{ adoptLabel }}</span>
+          <div style="font-size: 15px; font-weight: 500; color: #17262b;"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);">All agents </span>Of surveyed agents chose KAE embed over the backslash menu</div>
+          <div aria-hidden="true" style="height: 10px; border-radius: 999px; background: #ffffff;"><span style="{{ adoptBar }}"></span></div>
+        </div>
+        <div style="background: #F8EAF6; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 10px;">
+          <span aria-hidden="true" style="font-family: 'Poetsen One', Poppins, sans-serif; font-size: clamp(40px, 5vw, 56px); line-height: 1; color: #23813B;">{{ improveLabel }}</span>
+          <div style="font-size: 15px; font-weight: 500; color: #17262b;"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);">92 percent </span>Said KAE embed improved their ability to support customers</div>
+          <div aria-hidden="true" style="height: 10px; border-radius: 999px; background: #ffffff;"><span style="{{ improveBar }}"></span></div>
+        </div>
+        <div style="background: #F8EAF6; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 10px;">
+          <span aria-hidden="true" style="font-family: 'Poetsen One', Poppins, sans-serif; font-size: clamp(40px, 5vw, 56px); line-height: 1; color: #23813B;">{{ monthsLabel }}</span>
+          <div style="font-size: 15px; font-weight: 500; color: #17262b;"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);">7 months </span>After release, adoption held with the backslash menu still available</div>
+          <div aria-hidden="true" style="display: flex; gap: 5px;"><span style="{{ m1 }}"></span><span style="{{ m2 }}"></span><span style="{{ m3 }}"></span><span style="{{ m4 }}"></span><span style="{{ m5 }}"></span><span style="{{ m6 }}"></span><span style="{{ m7 }}"></span></div>
+        </div>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; align-items: stretch; gap: 16px;">
+        <figure style="margin: 0; flex: 1 1 320px; display: flex; flex-direction: column; gap: 12px;">
+          <figcaption style="display: flex; align-items: center; gap: 10px;">
+            <span style="padding: 4px 10px; border-radius: 999px; background: #e7e2de; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.06em; color: #3d4a4f;">V1</span>
+            <span style="font-size: 15px; font-weight: 500;">KAE embedded in Salesforce with large fonts and whitespace</span>
+          </figcaption>
+          <button type="button" onClick="{{ openPhase1 }}" aria-label="View V1 full size" style="flex: 1; width: 100%; display: flex; flex-direction: column; gap: 10px; padding: 0; border: 0; background: none; cursor: zoom-in; font: inherit; color: #17262b; text-align: left;" style-hover="color: #c2551d;">
+            <span style="display: flex; align-items: center; justify-content: center; width: 100%; aspect-ratio: 4 / 3; background: #f3efec; border: 1px solid #ecd9cf; border-radius: 12px; padding: 16px;">
+              <img src="./pa-phase2-v1-embed.png" alt="V1: KAE embedded in a Salesforce tab with large fonts and generous whitespace, so only the account header fits on screen; account number blurred" style="display: block; max-width: 100%; max-height: 100%;">
+            </span>
+            <span aria-hidden="true" style="align-self: flex-end; font-size: 14px; font-weight: 500; text-decoration: underline; text-underline-offset: 4px;">View full size ⤢</span>
+          </button>
+        </figure>
+        <div aria-hidden="true" style="flex: 0 0 auto; align-self: center; width: 44px; height: 44px; border-radius: 999px; background: #c2551d; color: #fffdfb; display: flex; align-items: center; justify-content: center; font-size: 20px;">→</div>
+        <figure style="margin: 0; flex: 1 1 320px; display: flex; flex-direction: column; gap: 12px;">
+          <figcaption style="display: flex; align-items: center; gap: 10px;">
+            <span style="padding: 4px 10px; border-radius: 999px; background: #c2551d; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.06em; color: #fffdfb;">V2</span>
+            <span style="font-size: 15px; font-weight: 500;">Smaller fonts and less whitespace</span>
+          </figcaption>
+          <button type="button" onClick="{{ openPhase2 }}" aria-label="View V2 full size" style="flex: 1; width: 100%; display: flex; flex-direction: column; gap: 10px; padding: 0; border: 0; background: none; cursor: zoom-in; font: inherit; color: #17262b; text-align: left;" style-hover="color: #c2551d;">
+            <span style="display: flex; align-items: center; justify-content: center; width: 100%; aspect-ratio: 4 / 3; background: #f3efec; border: 1px solid #ecd9cf; border-radius: 12px; padding: 16px;">
+              <img src="./pa-phase2-v2.png" alt="V2: Account home in KAE with reduced font size and padding, showing more sections including exceptions and customer tabs without scrolling" style="display: block; max-width: 100%; max-height: 100%;">
+            </span>
+            <span aria-hidden="true" style="align-self: flex-end; font-size: 14px; font-weight: 500; text-decoration: underline; text-underline-offset: 4px;">View full size ⤢</span>
+          </button>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top: 1px solid #efe6e0; background: #fdf9f6;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(40px, 5vw, 64px) 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px;">
+      <div>
+        <div style="font-family: 'Poetsen One', Poppins, sans-serif; font-size: 22px; letter-spacing: -0.01em; color: #23813B; margin-bottom: 8px;">Next project</div>
+        <a href="funding-structure.html" style="font-family: 'Poetsen One', Poppins, sans-serif; font-size: clamp(22px, 2.6vw, 32px); letter-spacing: -0.02em; color: #17262b;" style-hover="color: #c2551d;">A streamlined funding structure &rarr;</a>
+      </div>
+      <a href="index.html#work" style="display: inline-flex; align-items: center; padding: 14px 24px; border-radius: 999px; border: 1px solid #d8cac1; color: #17262b; font-size: 15px; font-weight: 500;" style-hover="border-color: #17262b; color: #17262b;">All work</a>
+    </div>
+  </section>
+
+  <section id="contact" style="background: #fffdfb; border-top: 1px solid #efe6e0;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(52px, 7vw, 100px) 28px; display: flex; flex-wrap: wrap; gap: clamp(28px, 5vw, 72px);">
+      <h2 style="margin: 0; flex: 0 1 220px; font-family: 'Poetsen One', Poppins, sans-serif; font-weight: 400; font-size: clamp(26px, 3vw, 38px); letter-spacing: -0.02em; color: #c2551d; line-height: 1.08;">Let&rsquo;s work together</h2>
+      <div style="flex: 1 1 440px; min-width: 0;">
+        <p style="margin: 0 0 clamp(20px, 3vw, 30px); font-size: clamp(17px, 1.6vw, 20px); line-height: 1.6; color: #4a5a60; max-width: 48ch; text-wrap: pretty;">Have a project in mind? I&rsquo;d love to connect.</p>
+        <a href="mailto:christineanhhoang@gmail.com" style="display: inline-block; font-size: clamp(22px, 4vw, 48px); font-weight: 600; letter-spacing: -0.035em; color: #17262b; border-bottom: 2px solid #f0ddd3; padding-bottom: 6px; word-break: break-word;" style-hover="border-bottom-color: #c2551d; color: #c2551d;">christineanhhoang@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background: #c2551d; color: #fffdfb;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: clamp(36px, 5vw, 56px) 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px;">
+      <div style="font-size: 15px; font-weight: 500;">Christine Anh Hoang &mdash; Product Designer</div>
+      <nav style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 15px;">
+        <a href="index.html" style="color: #fffdfb;">Home</a>
+        <a href="about.html" style="color: #fffdfb;">About</a>
+        <a href="index.html#work" style="color: #fffdfb;">Work</a>
+        <a href="#contact" style="color: #fffdfb;">Contact</a>
+      </nav>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #fff4ec;">&copy; 2026 &middot; London</div>
+    </div>
+  </footer>
+
+  <sc-if value="{{ zoomOpen }}" hint-placeholder-val="{{ false }}">
+    <div role="dialog" aria-modal="true" aria-label="Full size image" style="position: fixed; inset: 0; z-index: 1000; background: rgba(150, 145, 142, 0.6); display: flex; flex-direction: column;">
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 20px; color: #17262b; border-bottom: 1px solid #e3d9d2; background: rgba(255, 253, 251, 0.94); font-family: Poppins, sans-serif; font-size: 14px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #4a5a60;">{{ zoomHint }}</span>
+        <button onClick="{{ closeZoom }}" aria-label="Close" style="padding: 10px 18px; border-radius: 999px; border: 0; background: #c2551d; color: #fffdfb; font-family: Poppins, sans-serif; font-size: 14px; font-weight: 500; cursor: pointer;">Close ✕</button>
+      </div>
+      <div ref="{{ scrollRef }}" style="flex: 1; overflow: auto; display: flex; padding: 20px;">
+        <img ref="{{ imgRef }}" alt="{{ zoomAlt }}" onClick="{{ toggleScale }}" style="{{ imgStyle }}">
+      </div>
+    </div>
+  </sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { open: false, actual: false, src: '', alt: '', zoomPx: null };
+  scrollRef = React.createRef();
+  imgRef = React.createRef();
+  statsRef = React.createRef();
+  _setupReveal = (tries) => {
+    const secs = Array.from(document.querySelectorAll('section'));
+    if (secs.length < 4) { if (tries < 60) requestAnimationFrame(() => this._setupReveal(tries + 1)); return; }
+    if (!('IntersectionObserver' in window)) return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const targets = [];
+    secs.slice(1).forEach((sec) => {
+      const inner = sec.firstElementChild;
+      if (!inner) return;
+      let kids = Array.from(inner.children);
+      if (kids.length === 1 && kids[0].children.length > 1 && !kids[0].matches('figure, img')) kids = Array.from(kids[0].children);
+      const flat = [];
+      kids.forEach((k) => {
+        if (k.children.length > 1 && getComputedStyle(k).flexDirection === 'column' && !k.matches('figure')) Array.from(k.children).forEach((c) => flat.push(c));
+        else flat.push(k);
+      });
+      flat.forEach((el, i) => { el.classList.add('rv'); el.style.setProperty('--rv-d', Math.min(i, 6) * 80 + 'ms'); targets.push(el); });
+    });
+    this._rio = new IntersectionObserver((entries) => {
+      entries.forEach((en) => { if (en.isIntersecting) { en.target.classList.add('rv-in'); this._rio.unobserve(en.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    targets.forEach((t) => this._rio.observe(t));
+  };
+  componentDidMount() {
+    this._setupReveal(0);
+    this._key = (e) => { if (e.key === 'Escape' && this.state.open) this.close(); };
+    window.addEventListener('keydown', this._key);
+    this.setState({ p: 0, p2: 0, p3: 0 });
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this._rafs = {}; this._ios = [];
+    const run = (key) => {
+      if (this['_ran_' + key]) return; this['_ran_' + key] = true;
+      if (reduce) { this.setState({ [key]: 1 }); return; }
+      const t0 = performance.now(), dur = 1400;
+      const step = (t) => {
+        const k = Math.min(1, (t - t0) / dur);
+        this.setState({ [key]: 1 - Math.pow(1 - k, 3) });
+        if (k < 1) this._rafs[key] = requestAnimationFrame(step);
+      };
+      this._rafs[key] = requestAnimationFrame(step);
+    };
+    const watch = (ref, key) => {
+      const el = ref.current;
+      if (!el) { requestAnimationFrame(() => watch(ref, key)); return; }
+      if (!('IntersectionObserver' in window)) { run(key); return; }
+      const io = new IntersectionObserver((es) => { if (es.some(x => x.isIntersecting)) { run(key); io.disconnect(); } }, { threshold: 0.35 });
+      io.observe(el); this._ios.push(io);
+    };
+    watch(this.statsRef, 'p'); watch(this.pilotRef, 'p2'); watch(this.phase2Ref, 'p3');
+  }
+  pilotRef = React.createRef();
+  phase2Ref = React.createRef();
+  componentWillUnmount() { window.removeEventListener('keydown', this._key); document.body.style.overflow = ''; (this._ios || []).forEach(i => i.disconnect()); Object.values(this._rafs || {}).forEach(r => cancelAnimationFrame(r)); }
+  componentDidUpdate() { const i = this.imgRef.current; if (i && this.state.src && i.getAttribute('src') !== this.state.src) i.setAttribute('src', this.state.src); }
+  openImg = (file, alt) => {
+    const src = new URL(file, document.baseURI).href;
+    document.body.style.overflow = 'hidden';
+    this.setState({ open: true, actual: false, src, alt, zoomPx: null });
+  };
+  openPhase1 = () => this.openImg('./pa-phase2-v1-embed.png', 'V1: KAE embedded in Salesforce with large fonts and whitespace');
+  openPhase2 = () => this.openImg('./pa-phase2-v2.png', 'V2: Smaller fonts and less whitespace');
+  close = () => { document.body.style.overflow = ''; this.setState({ open: false }); };
+  toggle = (e) => {
+    const el = this.scrollRef.current;
+    const img = e && e.currentTarget && e.currentTarget.tagName === 'IMG' ? e.currentTarget : null;
+    let fx = 0.5, fy = 0.5, zoomPx = null;
+    if (img && !this.state.actual) {
+      const r = img.getBoundingClientRect();
+      fx = (e.clientX - r.left) / r.width; fy = (e.clientY - r.top) / r.height;
+      const nw = img.naturalWidth, nh = img.naturalHeight;
+      if (nw && nh) zoomPx = Math.round(Math.min(r.width, r.height * nw / nh) * 1.4) + 'px';
+    }
+    this.setState(s => ({ actual: !s.actual, zoomPx }), () => {
+      if (!el || !this.state.actual) return;
+      requestAnimationFrame(() => {
+        el.scrollLeft = fx * el.scrollWidth - el.clientWidth / 2;
+        el.scrollTop = fy * el.scrollHeight - el.clientHeight / 2;
+      });
+    });
+  };
+  renderVals() {
+    const a = this.state.actual;
+    const p = this.state.p == null ? 1 : this.state.p;
+    const p2 = this.state.p2 == null ? 1 : this.state.p2;
+    const p3 = this.state.p3 == null ? 1 : this.state.p3;
+    const months = Math.round(7 * p3);
+    const mDot = (i) => ({ flex: 1, height: '10px', borderRadius: '999px', background: months >= i ? '#E443B7' : '#ffffff', transition: 'background 0.2s ease' });
+    const bar = (w) => ({ display: 'block', width: w + '%', height: '100%', borderRadius: '999px', background: '#23813B' });
+    return {
+      statsRef: this.statsRef,
+      pilotRef: this.pilotRef,
+      phase2Ref: this.phase2Ref,
+      pilotAgents: Math.round(19 * p2),
+      pilotLead: Math.round(1 * p2),
+      pilotWeeks: Math.round(2 * p2),
+      adoptLabel: Math.round(100 * p3) + '%',
+      improveLabel: Math.round(92 * p3) + '%',
+      monthsLabel: months + (months === 1 ? ' month' : ' months'),
+      adoptBar: bar(100 * p3),
+      improveBar: bar(92 * p3),
+      m1: mDot(1), m2: mDot(2), m3: mDot(3), m4: mDot(4), m5: mDot(5), m6: mDot(6), m7: mDot(7),
+      ahtLabel: (1.6 * p).toFixed(1),
+      arrowStyle: { display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '52px', height: '52px', borderRadius: '999px', background: '#E443B7', color: '#000000', fontSize: '28px', fontWeight: 700, transform: 'translateY(' + Math.round((1 - p) * -10) + 'px)', opacity: 0.3 + 0.7 * p },
+      chipStyle: { padding: '4px 10px', borderRadius: '999px', background: '#23813B', color: '#ffffff', fontSize: '13px', fontWeight: 600, opacity: p > 0.95 ? 1 : 0, transition: 'opacity 0.4s ease' },
+      zoomOpen: this.state.open,
+      imgRef: this.imgRef,
+      scrollRef: this.scrollRef,
+      openPhase1: this.openPhase1,
+      openPhase2: this.openPhase2,
+      closeZoom: this.close,
+      toggleScale: this.toggle,
+      zoomAlt: this.state.alt || 'Full size image',
+      zoomHint: a ? 'Scroll to pan · click to fit' : 'Click the image to zoom in · Esc to close',
+      imgStyle: a
+        ? { display: 'block', margin: 0, width: this.state.zoomPx || 'auto', height: 'auto', maxWidth: 'none', maxHeight: 'none', flex: '0 0 auto', alignSelf: 'flex-start', cursor: 'zoom-out' }
+        : { display: 'block', margin: 'auto', width: '100%', height: '100%', minWidth: 0, minHeight: 0, objectFit: 'contain', cursor: 'zoom-in' },
+    };
+  }
+}
+</script>
+</body>
+</html>
